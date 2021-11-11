@@ -1,0 +1,200 @@
+<html>
+<head>
+	<style>
+		
+		body {
+			background-color:#000000;
+			padding:0px;
+			margin:0px;
+			-webkit-touch-callout: none; /* iOS Safari */
+			-webkit-user-select: none; /* Safari */
+			 user-select: none; 
+			 -webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+        img {
+			-webkit-touch-callout: none; /* iOS Safari */
+			-webkit-user-select: none; /* Safari */
+			 user-select: none; 
+			 -webkit-user-drag: none;
+			   -khtml-user-drag: none;
+			   -moz-user-drag: none;
+			   -o-user-drag: none;
+			   user-drag: none;
+        }
+		.instrument-wrapper {
+			display:none;
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%, -50%);
+		}
+		.exit-button {
+			position:fixed;
+			z-index:10000;
+			right:-20px;
+			margin-right:20px;
+			top:10px;
+		}
+		.exit-button-img {
+			width:40px;
+		}
+		@media only screen and (device-width: 568px) {
+			.instrument-wrapper {
+				transform:translate(-50%, -50%) scale(0.80);
+			}
+			.exit-button {
+				top:40px;
+				right:-110px;
+			}
+			.exit-button img{
+				width:80px;
+			}
+		}
+		@media only screen and (device-width: 667px) {
+			.instrument-wrapper {
+				transform:translate(-50%, -50%) scale(0.80);
+			}
+			.exit-button {
+				top:40px;
+				right:-110px;
+			}
+			.exit-button img{
+				width:80px;
+			}
+		}
+		@media only screen and (device-width: 736px) {
+			.instrument-wrapper {
+				transform:translate(-50%, -50%) scale(0.80);
+			}
+			.exit-button {
+				top:40px;
+				right:-110px;
+			}
+			.exit-button img{
+				width:80px;
+			}
+		}
+		@media only screen and (device-width : 812px) { 
+			.instrument-wrapper {
+				transform:translate(-50%, -50%) scale(0.65);
+			}
+			.exit-button {
+				top:40px;
+				right:-110px;
+			}
+			.exit-button img{
+				width:80px;
+			}
+		}
+		#instrument-section {
+			width:100%;
+			height:100%;
+		}
+		.knobtop, .knobline {
+			position:relative;
+            top:-78px;
+			left:82px;	
+		}
+		.ring {
+			position:relative;
+			top:0px;
+			left:-88px;
+		}
+		.pot-touch-point {
+			background-color:#ff0000;
+			position:relative;
+			opacity:0.25;
+		    width:86px;
+			height:86px;
+			margin-top:-86px;
+			margin-left:-86px;
+            top:168px;
+			left:168px;	
+		}
+		.touch-point {
+			background-color:#ffffff;
+			opacity:0.25;
+		}
+		.control {
+			display:none;
+		}
+		#menu-section {
+			background-color:#333333;
+			top:0px;
+			left:0px;
+			
+			padding: 0px 10% 0px 10%;
+			overflow: auto;
+			white-space: nowrap;
+		}
+		.menu-item-wrapper {
+			  display: inline-block;
+			  
+		}
+		.menu-item-image:hover {
+			opacity:1.0;
+		}
+		.menu-item-image {
+			height:70%;
+			margin:15% 20px 15% 20px;
+			opacity:.65;
+		}
+		.scale-up-center {
+			-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+			        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+		}
+		@-webkit-keyframes scale-up-center {
+		  0% {
+		    -webkit-transform: scale(0.5);
+		            transform: scale(0.5);
+		  }
+		  100% {
+		    -webkit-transform: scale(1);
+		            transform: scale(1);
+		  }
+		}
+		@keyframes scale-up-center {
+		  0% {
+		    -webkit-transform: scale(0.5);
+		            transform: scale(0.5);
+		  }
+		  100% {
+		    -webkit-transform: scale(1);
+		            transform: scale(1);
+		  }
+		}
+		
+	</style>
+	<script src="noisemusick-scripts.js"></script>
+</head>
+<body onload="noisemusickSetup()">
+	<div id="menu-section"></div>
+	<div id="instrument-section"></div>
+</body>
+	<script>
+	
+		var ledOn = true;
+		var angle = 0;
+		var switchState = true;
+ 		var toggleSwitch = setInterval(function(){ 
+ 			if (switchState) {
+ 				document.getElementById("switch-0-3-on").style["display"] = "block";
+				document.getElementById("switch-0-3-off").style["display"] = "none";
+ 				switchState = false;
+  			} else {
+ 				document.getElementById("switch-0-3-on").style["display"] = "none";
+				document.getElementById("switch-0-3-off").style["display"] = "block";
+ 				switchState = true;
+  			}
+ 		 }, 1000);
+  		var rotate = setInterval(function(){ 
+ 			angle = (angle + 1) % 360;
+			
+  			document.getElementById("pot-0-0-knobline").style["transform"] = "rotate(" + angle + "deg)";
+  			document.getElementById("pot-0-1-knobline").style["transform"] = "rotate(" + angle + "deg)";
+  			document.getElementById("pot-0-0-ring").style["transform"] = "rotate(" + angle + "deg)";
+  			document.getElementById("pot-0-1-ring").style["transform"] = "rotate(" + angle + "deg)";
+  		 }, 5);
+		
+	</script>
+</html>

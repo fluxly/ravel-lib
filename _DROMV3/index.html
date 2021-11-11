@@ -1,0 +1,217 @@
+<html>
+<head>
+	<style>
+		body {
+			background-color:#000000;
+		}
+		.instrument-wrapper {
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%, -50%);
+		}
+		.instrument-background-img {
+			height:768px;
+		}
+		.knobtop, .knobdot {
+			position:relative;
+            top:82px;
+			left:82px;	
+		}
+		.ring {
+			position:relative;
+			top:-95px;
+		}
+		.pot-touch-point {
+			background-color:#ff0000;
+			position:relative;
+			opacity:0.25;
+		    width:86px;
+			height:86px;
+			margin-top:-86px;
+			margin-left:-86px;
+            top:175px;
+			left:175px;	
+		}
+		.pot-1-1 {
+			position:absolute;
+			top:5px;
+			left:-8px;
+		}
+		.pot-1-2 {
+			position:absolute;
+			top:5px;
+			left:200px;
+		}
+		.pot-1-3 {
+			top:5px;
+			left:560px;
+		}
+		.pot-1-4 {
+			top:5px;
+			left:768px;
+		}
+		.pot-1-5 {
+			top:386px;
+			left:-8px;
+		}
+		.pot-1-6 {
+			top:386px;
+			left:182px;
+		}
+		.pot-1-7 {
+			top:386px;
+			left:370px;
+		}
+		
+		.pot-1-8 {
+			top:386px;
+			left:560px;
+		}
+		.pot-1-9 {
+			top:386px;
+			left:768px;
+		}
+		.switch-1-1 {
+			position:absolute;
+			top:100px;
+			left:470px;
+		}
+		#instrument-1-led {
+			position:absolute;
+			top:165px;
+			left:458px;
+		}
+		.touch-point {
+			width:280px;
+			height:280px;
+			background-color:#ffffff;
+			opacity:0.25;
+		}
+		#slider-1-1 {
+			position:absolute;
+			top:310px;
+			left:458px;
+		}
+		.pot {
+			width:246px;
+			height:246px;
+			position:absolute;
+			transform-origin: center center!important;
+		}
+	</style>
+	<script src="drom-scripts.js"></script>
+
+</head>
+<body onload="dromSetup()">
+	<div class="instrument-wrapper" id="instrument-wrapper-1">
+		<div class="instrument-background" id="instrument-background-1">
+			<img class="instrument-background-img" src="images/InstrumentImages/Drom-ipad.png">
+		</div>
+		<div class="control slider slider-1-1" id="slider-1-1">
+			<img class="control-img slider-img" id="slider-1-1-img" src="images/ControlImages/Slider-ipad.png">
+		</div>
+		<div id="instrument-1-led"><img src="images/ControlImages/LedGlow-ipad.png"></div>
+		<div id="instrument-1-controls">
+		<div class="control pot pot-1-1" id="pot-1-1">
+			<a onclick="alert('1')"><div class="pot-touch-point" id="pot-touch-point-1-1"></div>
+			<img class="control-img knobdot" id="pot-1-1-knobdot" src="images/ControlImages/KnobDot-ipad.png">
+			<img class="control-img ring" id="pot-1-1-ring" src="images/ControlImages/RingWhite-ipad.png">
+		</div>
+		<div class="control pot pot-1-2" id="pot-1-2">
+			<img class="control-img knobdot" id="pot-1-2-knobdot" src="images/ControlImages/KnobDot-ipad.png">
+			<img class="control-img ring" id="pot-1-2-ring" src="images/ControlImages/RingWhite-ipad.png">
+		</div>
+		<div class="control pot pot-1-3" id="pot-1-3">
+			<img class="control-img knobdot" id="pot-1-3-knobdot" src="images/ControlImages/KnobDot-ipad.png">
+			<img class="control-img ring" id="pot-1-3-ring" src="images/ControlImages/RingWhite-ipad.png">
+		</div>
+		<div class="control pot pot-1-4" id="pot-1-4">
+			<img class="control-img knobdot" id="pot-1-4-knobdot" src="images/ControlImages/KnobDot-ipad.png">
+			<img class="control-img ring" id="pot-1-4-ring" src="images/ControlImages/RingWhite-ipad.png">
+		</div>
+		<div class="control pot pot-1-5" id="pot-1-5">
+			<img class="control-img knobdot" id="pot-1-5-knobdot" src="images/ControlImages/KnobDot-ipad.png">
+			<img class="control-img ring" id="pot-1-5-ring" src="images/ControlImages/RingWhite-ipad.png">
+		</div>
+		<div class="control pot pot-1-6" id="pot-1-6">
+			<img class="control-img knobdot" id="pot-1-6-knobdot" src="images/ControlImages/KnobDot-ipad.png">
+			<img class="control-img ring" id="pot-1-6-ring" src="images/ControlImages/RingWhite-ipad.png">
+		</div>
+		<div class="control pot pot-1-7" id="pot-1-7">
+			<img class="control-img knobdot" id="pot-1-7-knobdot" src="images/ControlImages/KnobDot-ipad.png">
+			<img class="control-img ring" id="pot-1-7-ring" src="images/ControlImages/RingWhite-ipad.png">
+		</div>
+		<div class="control pot pot-1-8" id="pot-1-8">
+			<img class="control-img knobdot" id="pot-1-8-knobdot" src="images/ControlImages/KnobDot-ipad.png">
+			<img class="control-img ring" id="pot-1-8-ring" src="images/ControlImages/RingWhite-ipad.png">
+		</div>
+		<div class="control pot pot-1-9" id="pot-1-9">
+			<img class="control-img knobdot" id="pot-1-9-knobdot" src="images/ControlImages/KnobDot-ipad.png">
+			<img class="control-img ring" id="pot-1-9-ring" src="images/ControlImages/RingWhite-ipad.png">
+		</div>
+		
+		<div class="control switch switch-1-1" id="switch-1-2">
+			<img class="control-img switch-img" style="position:absolute; top:0px; left:0px;" id="switch-1-1-off" src="images/ControlImages/twoPosSwitch0-ipad.png">
+			<img class="control-img switch-img" style="position:absolute; top:0px; left:0px;"  id="switch-1-1-on" src="images/ControlImages/twoPosSwitch1-ipad.png">
+		</div>
+	
+	</div>
+	</div>
+</body>
+	<script>
+		var ledOn = true;
+		var angle = 0;
+		var sliderPos = .5;
+		var switchState = true;
+		var blink = setInterval(function(){ 
+			if (ledOn) {
+				document.getElementById("instrument-1-led").style["display"] = "none";
+				ledOn = false;
+ 			} else {
+				document.getElementById("instrument-1-led").style["display"] = "block";
+				ledOn = true;
+ 			}
+		 }, 1000);
+ 		var toggleSwitch = setInterval(function(){ 
+ 			if (switchState) {
+ 				document.getElementById("switch-1-1-on").style["display"] = "block";
+				document.getElementById("switch-1-1-off").style["display"] = "none";
+				document.getElementById("pot-1-1-ring").style["display"] = "none";
+ 				switchState = false;
+  			} else {
+ 				document.getElementById("switch-1-1-on").style["display"] = "none";
+				document.getElementById("switch-1-1-off").style["display"] = "block";
+				document.getElementById("pot-1-1-ring").style["display"] = "block";
+ 				switchState = true;
+  			}
+ 		 }, 1000);
+  		var rotate = setInterval(function(){ 
+			
+			sliderPos = (sliderPos + 0.0005) % 1;
+ 			angle = (angle + 1) % 360;
+			let sliderX = (730 * sliderPos) + 50;
+			document.getElementById("slider-1-1").style["left"] = sliderX;
+			
+  			document.getElementById("pot-1-1-knobdot").style["transform"] = "rotate(" + angle + "deg)";
+  			document.getElementById("pot-1-2-knobdot").style["transform"] = "rotate(" + angle + "deg)";
+  			document.getElementById("pot-1-1-ring").style["transform"] = "rotate(" + angle + "deg)";
+  			document.getElementById("pot-1-2-ring").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-3-knobdot").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-3-ring").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-4-knobdot").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-4-ring").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-5-knobdot").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-5-ring").style["transform"] = "rotate(" + angle + "deg)";
+			
+			document.getElementById("pot-1-6-knobdot").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-6-ring").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-7-knobdot").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-7-ring").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-8-knobdot").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-8-ring").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-9-knobdot").style["transform"] = "rotate(" + angle + "deg)";
+			document.getElementById("pot-1-9-ring").style["transform"] = "rotate(" + angle + "deg)";
+  		 }, 5);
+	</script>
+</html>
