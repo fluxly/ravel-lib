@@ -1,0 +1,7 @@
+ENV['SWIFT_VERSION'] = '5'
+use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
+target 'Noisemusick-ios' do
+pod "GCDWebServer", "~> 3.0"
+pod 'libpd', :git => 'https://github.com/libpd/libpd', :submodules => true
+end

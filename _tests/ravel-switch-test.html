@@ -1,0 +1,25 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./test-styles.css">
+	<style>
+		body {
+            touch-action: manipulation;  
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            user-select: none; 
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+	</style>
+	<script type="module">
+		import "../ravel-switch.js";
+	</script>
+</head>
+<body>
+<div id="page-wrapper">
+    <ravel-switch states="2" state-icons="⛔️,🟢" state-signals="on,off" size="25px"></ravel-switch>
+	<ravel-switch states="4" state-icons="⛔️,🟢,⚠️,🟣" state-signals="one,two,three,four" orientation="vertical"></ravel-switch>
+</div>
+</body>
+</html>
+

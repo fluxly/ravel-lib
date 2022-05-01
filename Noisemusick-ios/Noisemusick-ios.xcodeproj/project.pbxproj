@@ -1,0 +1,684 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2983CF3A278140CE002424E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2983CF39278140CE002424E2 /* AppDelegate.swift */; };
+		2983CF3C278140CE002424E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2983CF3B278140CE002424E2 /* SceneDelegate.swift */; };
+		2983CF3E278140CE002424E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2983CF3D278140CE002424E2 /* ViewController.swift */; };
+		2983CF41278140CE002424E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2983CF3F278140CE002424E2 /* Main.storyboard */; };
+		2983CF43278140D1002424E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2983CF42278140D1002424E2 /* Assets.xcassets */; };
+		2983CF46278140D1002424E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2983CF44278140D1002424E2 /* LaunchScreen.storyboard */; };
+		2983CF51278140D2002424E2 /* Noisemusick_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2983CF50278140D2002424E2 /* Noisemusick_iosTests.swift */; };
+		2983CF5C278140D2002424E2 /* Noisemusick_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2983CF5B278140D2002424E2 /* Noisemusick_iosUITests.swift */; };
+		2983D0DC27816808002424E2 /* StreamingAssets in Resources */ = {isa = PBXBuildFile; fileRef = 2983D0DB27816808002424E2 /* StreamingAssets */; };
+		299EBF1B279CD76B007F9A08 /* sample.pd in Resources */ = {isa = PBXBuildFile; fileRef = 299EBF1A279CD76B007F9A08 /* sample.pd */; };
+		697B0BAEE629770729D08C9B /* Pods_Noisemusick_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4828630BC0ABF4F94FFDE9 /* Pods_Noisemusick_ios.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2983CF4D278140D2002424E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2983CF2E278140CE002424E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2983CF35278140CE002424E2;
+			remoteInfo = "Noisemusick-ios";
+		};
+		2983CF58278140D2002424E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2983CF2E278140CE002424E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2983CF35278140CE002424E2;
+			remoteInfo = "Noisemusick-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2983CF36278140CE002424E2 /* Noisemusick-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Noisemusick-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2983CF39278140CE002424E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2983CF3B278140CE002424E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2983CF3D278140CE002424E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2983CF40278140CE002424E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2983CF42278140D1002424E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2983CF45278140D1002424E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2983CF47278140D1002424E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2983CF4C278140D2002424E2 /* Noisemusick-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Noisemusick-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2983CF50278140D2002424E2 /* Noisemusick_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noisemusick_iosTests.swift; sourceTree = "<group>"; };
+		2983CF52278140D2002424E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2983CF57278140D2002424E2 /* Noisemusick-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Noisemusick-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2983CF5B278140D2002424E2 /* Noisemusick_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noisemusick_iosUITests.swift; sourceTree = "<group>"; };
+		2983CF5D278140D2002424E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2983D0DB27816808002424E2 /* StreamingAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = StreamingAssets; sourceTree = "<group>"; };
+		299EBF1A279CD76B007F9A08 /* sample.pd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sample.pd; sourceTree = "<group>"; };
+		4476301766870B4515C0D3D5 /* Pods-Noisemusick-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noisemusick-ios.debug.xcconfig"; path = "Target Support Files/Pods-Noisemusick-ios/Pods-Noisemusick-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		9C4828630BC0ABF4F94FFDE9 /* Pods_Noisemusick_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Noisemusick_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE4C3C3799DCD2105D21CEB5 /* Pods-Noisemusick-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Noisemusick-ios.release.xcconfig"; path = "Target Support Files/Pods-Noisemusick-ios/Pods-Noisemusick-ios.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2983CF33278140CE002424E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				697B0BAEE629770729D08C9B /* Pods_Noisemusick_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2983CF49278140D2002424E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2983CF54278140D2002424E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F68626217D8F82F6400054D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C4828630BC0ABF4F94FFDE9 /* Pods_Noisemusick_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2983CF2D278140CE002424E2 = {
+			isa = PBXGroup;
+			children = (
+				2983CF38278140CE002424E2 /* Noisemusick-ios */,
+				2983CF4F278140D2002424E2 /* Noisemusick-iosTests */,
+				2983CF5A278140D2002424E2 /* Noisemusick-iosUITests */,
+				2983CF37278140CE002424E2 /* Products */,
+				98C1C795BAFE4CC7729372F0 /* Pods */,
+				0F68626217D8F82F6400054D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2983CF37278140CE002424E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2983CF36278140CE002424E2 /* Noisemusick-ios.app */,
+				2983CF4C278140D2002424E2 /* Noisemusick-iosTests.xctest */,
+				2983CF57278140D2002424E2 /* Noisemusick-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2983CF38278140CE002424E2 /* Noisemusick-ios */ = {
+			isa = PBXGroup;
+			children = (
+				299EBF19279CD76B007F9A08 /* Resources */,
+				2983D0DB27816808002424E2 /* StreamingAssets */,
+				2983CF39278140CE002424E2 /* AppDelegate.swift */,
+				2983CF3B278140CE002424E2 /* SceneDelegate.swift */,
+				2983CF3D278140CE002424E2 /* ViewController.swift */,
+				2983CF3F278140CE002424E2 /* Main.storyboard */,
+				2983CF42278140D1002424E2 /* Assets.xcassets */,
+				2983CF44278140D1002424E2 /* LaunchScreen.storyboard */,
+				2983CF47278140D1002424E2 /* Info.plist */,
+			);
+			path = "Noisemusick-ios";
+			sourceTree = "<group>";
+		};
+		2983CF4F278140D2002424E2 /* Noisemusick-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				2983CF50278140D2002424E2 /* Noisemusick_iosTests.swift */,
+				2983CF52278140D2002424E2 /* Info.plist */,
+			);
+			path = "Noisemusick-iosTests";
+			sourceTree = "<group>";
+		};
+		2983CF5A278140D2002424E2 /* Noisemusick-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2983CF5B278140D2002424E2 /* Noisemusick_iosUITests.swift */,
+				2983CF5D278140D2002424E2 /* Info.plist */,
+			);
+			path = "Noisemusick-iosUITests";
+			sourceTree = "<group>";
+		};
+		299EBF19279CD76B007F9A08 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				299EBF1A279CD76B007F9A08 /* sample.pd */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		98C1C795BAFE4CC7729372F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4476301766870B4515C0D3D5 /* Pods-Noisemusick-ios.debug.xcconfig */,
+				DE4C3C3799DCD2105D21CEB5 /* Pods-Noisemusick-ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2983CF35278140CE002424E2 /* Noisemusick-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2983CF60278140D2002424E2 /* Build configuration list for PBXNativeTarget "Noisemusick-ios" */;
+			buildPhases = (
+				D22FB592B1595C278DF0021F /* [CP] Check Pods Manifest.lock */,
+				2983CF32278140CE002424E2 /* Sources */,
+				2983CF33278140CE002424E2 /* Frameworks */,
+				2983CF34278140CE002424E2 /* Resources */,
+				6F6BA171966391CA33AD4442 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Noisemusick-ios";
+			productName = "Noisemusick-ios";
+			productReference = 2983CF36278140CE002424E2 /* Noisemusick-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2983CF4B278140D2002424E2 /* Noisemusick-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2983CF63278140D2002424E2 /* Build configuration list for PBXNativeTarget "Noisemusick-iosTests" */;
+			buildPhases = (
+				2983CF48278140D2002424E2 /* Sources */,
+				2983CF49278140D2002424E2 /* Frameworks */,
+				2983CF4A278140D2002424E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2983CF4E278140D2002424E2 /* PBXTargetDependency */,
+			);
+			name = "Noisemusick-iosTests";
+			productName = "Noisemusick-iosTests";
+			productReference = 2983CF4C278140D2002424E2 /* Noisemusick-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2983CF56278140D2002424E2 /* Noisemusick-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2983CF66278140D2002424E2 /* Build configuration list for PBXNativeTarget "Noisemusick-iosUITests" */;
+			buildPhases = (
+				2983CF53278140D2002424E2 /* Sources */,
+				2983CF54278140D2002424E2 /* Frameworks */,
+				2983CF55278140D2002424E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2983CF59278140D2002424E2 /* PBXTargetDependency */,
+			);
+			name = "Noisemusick-iosUITests";
+			productName = "Noisemusick-iosUITests";
+			productReference = 2983CF57278140D2002424E2 /* Noisemusick-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2983CF2E278140CE002424E2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					2983CF35278140CE002424E2 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					2983CF4B278140D2002424E2 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 2983CF35278140CE002424E2;
+					};
+					2983CF56278140D2002424E2 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 2983CF35278140CE002424E2;
+					};
+				};
+			};
+			buildConfigurationList = 2983CF31278140CE002424E2 /* Build configuration list for PBXProject "Noisemusick-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2983CF2D278140CE002424E2;
+			productRefGroup = 2983CF37278140CE002424E2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2983CF35278140CE002424E2 /* Noisemusick-ios */,
+				2983CF4B278140D2002424E2 /* Noisemusick-iosTests */,
+				2983CF56278140D2002424E2 /* Noisemusick-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2983CF34278140CE002424E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				299EBF1B279CD76B007F9A08 /* sample.pd in Resources */,
+				2983D0DC27816808002424E2 /* StreamingAssets in Resources */,
+				2983CF46278140D1002424E2 /* LaunchScreen.storyboard in Resources */,
+				2983CF43278140D1002424E2 /* Assets.xcassets in Resources */,
+				2983CF41278140CE002424E2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2983CF4A278140D2002424E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2983CF55278140D2002424E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F6BA171966391CA33AD4442 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Noisemusick-ios/Pods-Noisemusick-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Noisemusick-ios/Pods-Noisemusick-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Noisemusick-ios/Pods-Noisemusick-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D22FB592B1595C278DF0021F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Noisemusick-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2983CF32278140CE002424E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2983CF3E278140CE002424E2 /* ViewController.swift in Sources */,
+				2983CF3A278140CE002424E2 /* AppDelegate.swift in Sources */,
+				2983CF3C278140CE002424E2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2983CF48278140D2002424E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2983CF51278140D2002424E2 /* Noisemusick_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2983CF53278140D2002424E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2983CF5C278140D2002424E2 /* Noisemusick_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2983CF4E278140D2002424E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2983CF35278140CE002424E2 /* Noisemusick-ios */;
+			targetProxy = 2983CF4D278140D2002424E2 /* PBXContainerItemProxy */;
+		};
+		2983CF59278140D2002424E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2983CF35278140CE002424E2 /* Noisemusick-ios */;
+			targetProxy = 2983CF58278140D2002424E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2983CF3F278140CE002424E2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2983CF40278140CE002424E2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2983CF44278140D1002424E2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2983CF45278140D1002424E2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2983CF5E278140D2002424E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2983CF5F278140D2002424E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2983CF61278140D2002424E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4476301766870B4515C0D3D5 /* Pods-Noisemusick-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84W9Z6DLDJ;
+				INFOPLIST_FILE = "Noisemusick-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxlyandfrob.Noisemusick-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2983CF62278140D2002424E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE4C3C3799DCD2105D21CEB5 /* Pods-Noisemusick-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84W9Z6DLDJ;
+				INFOPLIST_FILE = "Noisemusick-ios/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxlyandfrob.Noisemusick-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2983CF64278140D2002424E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84W9Z6DLDJ;
+				INFOPLIST_FILE = "Noisemusick-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxlyandfrob.Noisemusick-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Noisemusick-ios.app/Noisemusick-ios";
+			};
+			name = Debug;
+		};
+		2983CF65278140D2002424E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84W9Z6DLDJ;
+				INFOPLIST_FILE = "Noisemusick-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxlyandfrob.Noisemusick-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Noisemusick-ios.app/Noisemusick-ios";
+			};
+			name = Release;
+		};
+		2983CF67278140D2002424E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84W9Z6DLDJ;
+				INFOPLIST_FILE = "Noisemusick-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxlyandfrob.Noisemusick-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Noisemusick-ios";
+			};
+			name = Debug;
+		};
+		2983CF68278140D2002424E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 84W9Z6DLDJ;
+				INFOPLIST_FILE = "Noisemusick-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fluxlyandfrob.Noisemusick-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Noisemusick-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2983CF31278140CE002424E2 /* Build configuration list for PBXProject "Noisemusick-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2983CF5E278140D2002424E2 /* Debug */,
+				2983CF5F278140D2002424E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2983CF60278140D2002424E2 /* Build configuration list for PBXNativeTarget "Noisemusick-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2983CF61278140D2002424E2 /* Debug */,
+				2983CF62278140D2002424E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2983CF63278140D2002424E2 /* Build configuration list for PBXNativeTarget "Noisemusick-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2983CF64278140D2002424E2 /* Debug */,
+				2983CF65278140D2002424E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2983CF66278140D2002424E2 /* Build configuration list for PBXNativeTarget "Noisemusick-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2983CF67278140D2002424E2 /* Debug */,
+				2983CF68278140D2002424E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2983CF2E278140CE002424E2 /* Project object */;
+}

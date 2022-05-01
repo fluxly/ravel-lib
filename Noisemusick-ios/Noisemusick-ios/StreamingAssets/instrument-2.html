@@ -1,0 +1,37 @@
+<html>
+<head>
+	<style>
+		#reference {
+			position:absolute;
+			width:2px;
+			height:2px;
+			background-color:#ff0000;
+			left:401px;
+			top:273px;
+		}
+		#pagewrapper, #instrument-control-section {
+			position:fixed;
+			top:0px;
+			left:0px;
+			width:100%;
+			height:100%;
+		}
+	</style>
+	<link rel="stylesheet" href="ravel/control-styles.css" />
+	<link rel="stylesheet" href="instrument-scene-styles.css" />
+	<link rel="stylesheet" href="menu-scene-styles.css" />
+	
+	<script src="ravel/ravel-control-widgets.js"></script>
+	<script src="noisemusick-scripts.js"></script>
+</head>
+<body onload="noisemusickSetup(2)">
+	<div id="pagewrapper">
+	<div id="instrument-section"></div>
+	<div id="instrument-control-section"></div>
+	<div id="reference"></div>
+    </div>
+</body>
+	<script>
+		// Any special setup code can go here
+	</script>
+</html>

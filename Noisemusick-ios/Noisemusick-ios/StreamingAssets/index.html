@@ -1,0 +1,32 @@
+<html>
+<head>
+	<style>
+		#reference {
+			position:absolute;
+			width:2px;
+			height:2px;
+			background-color:#ff0000;
+			left:401px;
+			top:273px;
+		}
+        #instrument-frame {	
+			display:none;
+        }
+	</style>
+	<link rel="stylesheet" href="ravel/control-styles.css" />
+	<link rel="stylesheet" href="instrument-scene-styles.css" />
+	<link rel="stylesheet" href="menu-scene-styles.css" />
+	
+	<script src="ravel/ravel-control-widgets.js"></script>
+	<script src="noisemusick-scripts.js"></script>
+</head>
+<body onload="noisemusickSetupMenu()">
+	<div style="color:#ff0000;">FOO BAR</div>
+	<iframe id="instrument-frame"></iframe>
+	<div id="menu-section"></div>
+
+</body>
+	<script>
+		console.log("Foo!");
+	</script>
+</html>

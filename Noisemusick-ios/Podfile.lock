@@ -1,0 +1,32 @@
+PODS:
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
+  - libpd (0.12.3)
+
+DEPENDENCIES:
+  - GCDWebServer (~> 3.0)
+  - libpd (from `https://github.com/libpd/libpd`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GCDWebServer
+
+EXTERNAL SOURCES:
+  libpd:
+    :git: https://github.com/libpd/libpd
+    :submodules: true
+
+CHECKOUT OPTIONS:
+  libpd:
+    :commit: 85332931d6b9f8fc9c56dcdfb6eedb5693935c7b
+    :git: https://github.com/libpd/libpd
+    :submodules: true
+
+SPEC CHECKSUMS:
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
+  libpd: 445932ee831e25fbb6bf1090fd613b2c3ba9bdd3
+
+PODFILE CHECKSUM: 20b81d46435d52399fff6b2787eb7e4d213842f7
+
+COCOAPODS: 1.10.2

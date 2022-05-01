@@ -1,0 +1,33 @@
+NOTES
+
+* Cryptozoologic: A daily puzzling sound module
+* Daily == new scene based on day of the month, same each month
+
+Ravel-lib:
+RavelEmoji.js
+ravel-wc-template.js
+ravel-switch.js
+ravel-slider.js
+ravel-sequencer.js
+ravel-sample.js
+ravel-pot.js
+ravel-patch-input.js
+ravel-menu.js
+ravel-lib-path.js
+ravel-led.js
+ravel-lcd.js
+ravel-emoji-grid.js
+ravel-element.js
+Box2d
+Fluxum
+Menu/resource loader
+Recordings management
+Tracery
+Tone.js
+P5 and P5.sound
+Howler?
+
+Saviing and sharing:
+serialize web components
+wrap it up in a PNG/box/cartirdge like fantasy console
+

@@ -1,0 +1,6 @@
+framework module Pods_Noisemusick_ios {
+  umbrella header "Pods-Noisemusick-ios-umbrella.h"
+
+  export *
+  module * { export * }
+}
