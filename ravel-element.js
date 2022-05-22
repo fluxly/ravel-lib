@@ -22,21 +22,6 @@ export class RavelElement extends HTMLElement {
 		}
 	}
     checkCommonAttributes(name, oldValue, newValue) {
-        if (name.includes('size')) {
-            this.size = Number(newValue);
-        }
-        if (name === 'x') {
-            this.container.style.position = 'fixed';
-            this.x = newValue;
-            this.container.style.left = newValue;
-        }
-        if (name === 'y') {
-            this.container.style.position = 'fixed';
-            this.y = newValue;
-            this.container.style.top = newValue;
-        }
-        if (name === 'orientation') {
-            this.orientation = newValue;
-        }
+        
     }
 } 

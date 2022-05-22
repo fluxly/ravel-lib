@@ -8,3 +8,9 @@
 .opacity-50 {
     opacity:50%;
 }
+@font-face {
+	font-family: 'Silkscreen';
+	src: url('slkscr.ttf') format('truetype'),
+	font-weight: normal;
+	font-style: normal;
+}

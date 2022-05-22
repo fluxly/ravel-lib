@@ -2,7 +2,7 @@ import { RavelElement } from './ravel-element.js';
 import { ravelLibPath } from './ravel-lib-path.js';
 import globalStyles from './global-styles.js';
 
-export default class RavelPhysicsWorld extends RavelElement {
+export default class RavelProgressiveComposition extends RavelElement {
     static get localStyles() {
         return `
         <style>
@@ -59,4 +59,4 @@ export default class RavelPhysicsWorld extends RavelElement {
     }
 }
 
-customElements.define('ravel-physics-world', RavelPhysicsWorld);
+customElements.define('ravel-progressive-composition', RavelProgressiveComposition);

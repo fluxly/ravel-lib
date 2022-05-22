@@ -1,8 +1,5 @@
-import { RavelElement } from './ravel-element.js';
-import { ravelLibPath } from './ravel-lib-path.js';
-import globalStyles from './global-styles.js';
 
-export default class RavelPhysicsWorld extends RavelElement {
+export default class CryptozoologicMothman extends HTMLElement {
     static get localStyles() {
         return `
         <style>
@@ -12,6 +9,7 @@ export default class RavelPhysicsWorld extends RavelElement {
   
     static get html() { 
         return `
+        <ravel-progressive-composition></ravel-progressive-composition>
         `;
     }
  
@@ -22,8 +20,7 @@ export default class RavelPhysicsWorld extends RavelElement {
     constructor() {
         super();
         const template = document.createElement('template');
-        template.innerHTML = globalStyles
-            + this.constructor.localStyles
+        template.innerHTML = this.constructor.localStyles
             + this.constructor.html;
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(template.content.cloneNode(true));
@@ -59,4 +56,4 @@ export default class RavelPhysicsWorld extends RavelElement {
     }
 }
 
-customElements.define('ravel-physics-world', RavelPhysicsWorld);
+customElements.define('cryptozoologic-mothman', CryptozoologicMothman);

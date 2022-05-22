@@ -4,26 +4,26 @@ All emojis. In general no text or numbers (Shempscape ok)
 
 
 31 Days:
-Nessie
-Pukwudgie
-Shempscape
-Mothman
-Irish Yeti
-Ozark Howler
-Bessie
+Nessie : Granular
+Pukwudgie : Samples in Eno loops
+3 Shempscape : Bytebeat shufflebox
+1 Mothman : Progressive Composition 1
+2 Irish Yeti : Euclydian polyrhythm
+Ozark Howler : three drawn waveforms modulate each other
+Bessie : plays samples on attack like Kate Bush bird piece
 Tessie
-Yak Shaver
-Wumpus
+Yak Shaver : rhythmicon with samples
+Whumpus : Palindromes
 Batsquatch
 Beast of Cardiff
-Donut Beast
-Fluxly
+Donut Beast 
+Fluxly : Fluxly field recorder
 Jersey Devil
 Lizard Man
 Montauk Monster
 Murray
 Mothra
-Gorrog
+Gorrog : Progressive Composition 2
 Snake Scarecrow
 Vampire Unicorn
 Pirahua
@@ -39,9 +39,9 @@ Ogopogo
 
 
 
-- three drawn waveforms modulate each other
+- 
 -- look at 120 years.net --
-plays samples on attack like Kate Bush bird piece
+
 In C
 SETI message generator Areceibo background
 John Cage Williams mix

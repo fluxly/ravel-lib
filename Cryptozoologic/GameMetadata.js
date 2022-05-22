@@ -8,7 +8,7 @@ export const GameMetadata = {
     "Bessie": { "element": "cryptozoologic-bessie", "orientation" : "portrait" },
     "Tessie": { "element": "cryptozoologic-tessie", "orientation" : "portrait" },
     "Yak Shaver": { "element": "cryptozoologic-yak-shaver", "orientation" : "portrait" },
-    "Wumpus": { "element": "cryptozoologic-wumpus", "orientation" : "portrait" },
+    "Whumpus": { "element": "cryptozoologic-whumpus", "orientation" : "portrait" },
     "Batsquatch": { "element": "cryptozoologic-batsquatch", "orientation" : "portrait" },
     "Beast of Cardiff": { "element": "cryptozoologic-beast-of-cardiff", "orientation" : "portrait" },
     "Donut Beast": { "element": "cryptozoologic-donut-beast", "orientation" : "portrait" },
