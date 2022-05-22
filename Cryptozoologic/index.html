@@ -1,0 +1,55 @@
+<html>
+<head>
+	<meta charset="utf-8"> 
+    <link rel="stylesheet" href="fonts/silkscreen.css">
+	<link rel="stylesheet" href="./styles.css">
+	<style>
+	</style>
+	
+</head>
+<body>
+<div id="page-wrapper">
+    <div id="hamburger">🍔</div>
+    <div id="share">👆</div>
+	<div id="nav-bar"><div id="title">CRYPTOZOOLOGIC</div></div>
+    <div id="content-wrapper">
+        <div id="menu-container">
+        </div>
+        <div id="game-container">
+        </div>
+    </div>
+</div>
+</body>
+	<script type="module">
+		import { RavelEmoji } from "../RavelEmoji.js";
+        import { GameMetadata } from "./GameMetadata.js";
+        
+        for (let key of Object.keys(GameMetadata)) {
+            let icon = RavelEmoji.getRandomEmoji();
+            let element = GameMetadata[key].element;
+            document.querySelector('#menu-container').innerHTML += `
+            <div class="game-menu-item" id="game-${element}">
+                <div class="game-menu-item-icon">${icon}</div>
+                <div class="game-menu-item-label">${key}</div>
+            </div>
+            `;
+        }
+        for (let key of Object.keys(GameMetadata)) {
+            let element = GameMetadata[key].element;
+            document.querySelector(`#game-${element}`).addEventListener('click', async (evt) => {
+                document.querySelector('#menu-container').classList.remove('slide-in-down');
+                document.querySelector('#menu-container').classList.add('slide-out-up');
+                await new Promise( resolve => setTimeout(resolve, 500));
+                document.querySelector('#game-container').classList.remove('slide-out-up');
+                document.querySelector('#game-container').style.display = "block";
+                document.querySelector('#game-container').innerHTML = `${element} <${element}></${element}>`;
+            });
+        }
+        document.querySelector(`#hamburger`).addEventListener('click', async (evt) => {
+            document.querySelector('#game-container').classList.add('slide-out-up');
+            document.querySelector('#menu-container').classList.remove('slide-out-up');
+            document.querySelector('#menu-container').classList.add('slide-in-down');
+        });
+	</script>
+</html>
+

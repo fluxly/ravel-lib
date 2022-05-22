@@ -1,0 +1,116 @@
+body {            
+    touch-action: manipulation;  
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    user-select: none; 
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    background-color: #000000;
+    font-family: 'Silkscreen';
+    color: #ffffff;
+}
+#hamburger {
+    font-size: 36px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+#share {
+    font-size: 36px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+#title {
+    font-size:36px;
+}
+#nav-bar {
+    text-align: center;
+    height: 9vh;
+    width: 100%;
+}
+#page-wrapper {
+    height: 95vh;
+    width: 100%;
+}
+#menu-container, #game-container {
+    border: 1px dotted red;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0); 
+    top: 10vh;
+    height: 85vh;
+    width: calc(.75 * 85vh);
+    display: grid;
+    grid: auto / auto auto auto auto;
+    padding: 10px;
+}
+#game-container {
+    display: none;
+}
+.game-menu-item:hover {
+    transform:scale(1.25);
+}
+.game-menu-item-icon {
+    text-align:center;
+    font-size:36px;
+}
+.game-menu-item-label {
+    text-align:center;
+    font-size:9px;
+}
+.slide-out-up {
+	-webkit-animation: slide-out-up 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-out-up 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+@-webkit-keyframes slide-out-up {
+  0% {
+    -webkit-transform: translate(-50%,0);
+            transform: translate(-50%,0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%,-1000px);
+            transform: translate(-50%,-1000px);
+    opacity: 1;
+  }
+}
+@keyframes slide-out-up {
+  0% {
+    -webkit-transform: translate(-50%,0);
+            transform: translate(-50%,0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%,-1000px);
+            transform: translate(-50%,-1000px);
+    opacity: 1;
+  }
+}
+.slide-in-down {
+	-webkit-animation: slide-in-down 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-down 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes slide-in-down {
+  0% {
+    -webkit-transform: translate(-50%,-1000px);
+            transform: translate(-50%,-1000px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%,0);
+            transform: translate(-50%,0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-down {
+  0% {
+    -webkit-transform: translate(-50%,-1000px);
+            transform: translate(-50%,-1000px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%,0);
+            transform: translate(-50%,0);
+    opacity: 1;
+  }
+}
