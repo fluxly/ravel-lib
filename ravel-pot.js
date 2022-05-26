@@ -61,14 +61,14 @@ export default class RavelPot extends RavelElement {
     setup() {
         this.observedMessages = ['message'];
         //this.subscribe(this.observedMessages);  
-        this.potKnob.textContent = RavelEmoji[`${this.icon}`];
-        this.potMarker .textContent = RavelEmoji[`${this.marker}`]; 
+        this.potKnob.textContent = RavelEmoji.getRandomRoundEmoji();
+        this.potMarker .textContent = RavelEmoji['white-circle']; // 
         this.container.style['font-size'] = `${this.size}px`;
         this.container.style['width'] = `${this.size}px`;
         this.container.style['height'] = `${this.size}px`;
         this.potMarker.style['font-size'] = `${this.size / 5}px`;
         this.potMarker.style['top'] = `-${this.size - this.size / 16}px`;
-        this.potMarker.style['left'] = `${this.size / 10}px`;
+        this.potMarker.style['left'] = `${- this.size /  4 }px`;
         this.potKnob.style['line-height'] = `-${this.size}px`;
         this.potKnob.style['top'] = `-${this.size / 8}px`;
         this.potMarker.style['opacity'] = `0.75`;

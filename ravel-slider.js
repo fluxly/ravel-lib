@@ -9,13 +9,13 @@ export default class RavelSlider extends RavelElement {
         <style>
         #slider-container {
             display:inline-block;
-            border: 3px solid #aaaaaa;
-            border-radius: 20px;
             cursor:pointer;
-            background-color:#eeeeee;
         }
-        #slider-handle {
+        #slider-handle-1, #slider-handle-2 {
             position: absolute;
+        }
+        #slider-handle-2 {
+            float:right;
         }
         </style>
         `;
@@ -24,13 +24,14 @@ export default class RavelSlider extends RavelElement {
     static get html() { 
         return `
         <div id="slider-container">
-        <div id="slider-handle" draggable="true"></div>
+        <div id="slider-handle-2" draggable="true"></div>
+        <div id="slider-handle-1" draggable="true"></div>
         </div>
         `;
     }
  
     static get observedAttributes() { 
-       return ['slider-id', 'color', 'length', 'size', 'x', 'y', 'orientation', 'value', 'icon', 'signals'];
+       return ['slider-id', 'sliders', 'length', 'size', 'x', 'y', 'orientation', 'value', 'icon', 'signals'];
     }
 
     constructor() {
@@ -54,13 +55,14 @@ export default class RavelSlider extends RavelElement {
     
     initialize() {
         this.container = this.shadowRoot.querySelector('#slider-container');
-        this.handle = this.shadowRoot.querySelector('#slider-handle');
+        this.handle = this.shadowRoot.querySelector('#slider-handle-1');
+        this.handle2 = this.shadowRoot.querySelector('#slider-handle-2');
         this.sliderId = 0;
         this.length = 300;
         this.size = 24;
         this.orientation = 'horizontal';
         this.value = 0.5;
-        this.color = 'black';
+        this.sliders = 1;
         this.stateSignals = `slider-${this.sliderId}`;
     }
   
@@ -72,39 +74,47 @@ export default class RavelSlider extends RavelElement {
         
         if (this.orientation === 'horizontal') {
             this.container.style['width'] = `${this.length}px`;
-            this.container.style['height'] = `${this.size}px`;
-            this.container.style['padding'] = `0px ${this.padding}px ${bottomPadding}px ${this.padding}px`;
+            this.container.style['height'] = `${this.size / 2 + 4 }px`;
+            this.container.style['border-bottom'] = `3px dotted #aaaaaa`;
         } else {
-            this.container.style['width'] = `${this.size}px`;
+            this.container.style['width'] = `${this.size / 2}px`;
             this.container.style['height'] = `${this.length}px`;
-            this.container.style['padding'] = `0px ${this.padding}px ${bottomPadding}px ${this.padding}px`;
+            this.container.style['border-right'] = `3px dotted #aaaaaa`;
         }
-        this.container.style['border-radius'] = `${this.size}px`;
+        if (this.sliders === 2) this.handle2.style.display = 'block';
         // TODO: set the position of the handle for passed in attributes
-        this.handle.textContent = RavelEmoji[`${this.color}-circle`];
+        let icon = RavelEmoji.getRandomEmoji()
+        console.log(icon);
+        this.handle.textContent = icon;
+        this.handle2.textContent = icon;
         this.containerX = this.container.getBoundingClientRect().left;
         this.containerY = this.container.getBoundingClientRect().top;
         this.handleX = this.handle.getBoundingClientRect().left;
         this.handleY = this.handle.getBoundingClientRect().top;
-        this.updateValue();
-        this.handle.addEventListener('mousedown', (e) => { 
-            console.log("mousedown");
-            e.preventDefault();
-            this.startX = e.clientX;
-            this.startY = e.clientY;
-            // bind changes signature, store the callback so we can later remove when dropped
-            this.mouseMoveCallback = this.dragElement.bind(this); 
-            this.mouseUpCallback = this.endDragElement.bind(this);
-            document.addEventListener('mousemove', this.mouseMoveCallback);
-            document.addEventListener('mouseup', this.mouseUpCallback);
-            document.addEventListener('mouseleave', this.mouseUpCallback);
-  	  });
+        this.handle2X = this.handle.getBoundingClientRect().left;
+        this.handle2Y = this.handle.getBoundingClientRect().top;
+        this.updateValues();
+        // bind changes signature, store the callback so we can later remove when dropped
+        this.mouseDownCallback = this.handleMouseDown.bind(this);
+        this.mouseMoveCallback = this.dragElement.bind(this); 
+        this.mouseUpCallback = this.endDragElement.bind(this); 
+        this.handle.addEventListener('mousedown', this.mouseDownCallback);
+        this.handle2.addEventListener('mousedown', this.mouseDownCallback);
+    }
+    handleMouseDown(e) {
+        e.preventDefault();
+        this.startX = e.clientX;
+        this.startY = e.clientY;
+        document.addEventListener('mousemove', this.mouseMoveCallback);
+        document.addEventListener('mouseup', this.mouseUpCallback);
+        document.addEventListener('mouseleave', this.mouseUpCallback);
     }
     
     dragElement(e) {
         e.preventDefault();
         let x = this.startX - e.clientX;
         let y = this.startY - e.clientY;
+        let draggedHandle = e.target;
         this.startX = e.clientX;
         this.startY = e.clientY;
         this.handleX = this.handle.getBoundingClientRect().left;
@@ -114,14 +124,14 @@ export default class RavelSlider extends RavelElement {
                 // moving left
                 if ((this.handleX - x) > (this.containerX + this.padding)) {
                     this.handle.style.left = (this.handle.offsetLeft - x) + 'px';
-                    this.updateValue();
+                    this.updateValues();
                 } 
             }
             if (x < 0) {
                 // moving right
                 if (((this.handleX - x) < (this.containerX + this.length + this.padding - this.size))) {
                     this.handle.style.left = (this.handle.offsetLeft - x) + 'px';
-                    this.updateValue();
+                    this.updateValues();
                 } 
             }
         } else {
@@ -129,14 +139,14 @@ export default class RavelSlider extends RavelElement {
                 // moving down
                 if ((this.handleY - y) > (this.containerY + this.padding)) {
                     this.handle.style.top = (this.handle.offsetTop - y) + 'px';
-                    this.updateValue();
+                    this.updateValues();
                 } 
             }
             if (y < 0) {
                 // moving up
                 if (((this.handleY - y) < (this.containerY + this.length + this.padding - this.size))) {
                     this.handle.style.top = (this.handle.offsetTop - y) + 'px';
-                    this.updateValue();
+                    this.updateValues();
                 } 
             }
         }
@@ -149,17 +159,19 @@ export default class RavelSlider extends RavelElement {
         document.removeEventListener('mouseleave', this.mouseUpCallback);
     }
      
-    updateValue() {
+    updateValues() {
         if (this.orientation === 'horizontal') {
             this.value = (this.handleX - (this.containerX + this.padding * 2)) / this.length;
         } else {
             this.value = ((this.containerY + this.padding * 2) - this.handleY) / this.length;
         }
-        console.log(this.value);
+        //console.log(this.value);
     }
     
     teardown() {
        // this.unsubscribe(this.observedMessages);
+       this.handle.removeEventListener('mousedown', this.mouseDownCallback);
+       this.handle2.removeEventListener('mousedown', this.mouseDownCallback);
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
@@ -182,8 +194,8 @@ export default class RavelSlider extends RavelElement {
         if (name.includes('slider-id')) {
             this.sliderId = newValue;
         }
-        if (name.includes('color')) {
-            this.color = newValue;
+        if (name.includes('sliders')) {
+            this.sliders = newValue;
         }
         if (name.includes('length')) {
             this.length = Number(newValue);

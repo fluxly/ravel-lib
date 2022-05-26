@@ -14,8 +14,75 @@ export default class RavelProgressiveComposition extends RavelElement {
         .grid-item {
            width:140px;
            height:100px;
-            border:1px solid #eeeeee;
             font-size:18px;
+        }
+        #auto-play {
+            position:absolute;
+            right:20px;
+            top: 80%;
+            font-size: 80px;
+        }
+        #auto-play-indicator {
+            margin-bottom: -32px;
+            margin-left:30px;
+            font-size:24px;
+        }
+        @-webkit-keyframes pulse {
+          to {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+        }
+        @keyframes pulse {
+          to {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+        }
+        .pulse {
+          display: inline-block;
+          vertical-align: middle;
+          -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+         -webkit-animation-name: pulse;
+          animation-name: pulse;
+          -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+          -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+        }
+        .scale-out-center {
+        	-webkit-animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        	        animation: scale-out-center 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        }
+        @-webkit-keyframes scale-out-center {
+          0% {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            opacity: 1;
+          }
+          100% {
+            -webkit-transform: scale(0);
+                    transform: scale(0);
+            opacity: 1;
+          }
+        }
+        @keyframes scale-out-center {
+          0% {
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            opacity: 1;
+          }
+          100% {
+            -webkit-transform: scale(0);
+                    transform: scale(0);
+            opacity: 1;
+          }
         }
         </style>
         `;
@@ -27,6 +94,10 @@ export default class RavelProgressiveComposition extends RavelElement {
          <div id="composition-grid">
          </div>
          <ravel-slider size="20" color="red" length="300" y="90%"></ravel-slider>
+         <div id="auto-play">
+        <div id="auto-play-indicator">⚫️</div>
+        🐐
+        </div>
         </div>
         `;
     }
@@ -61,6 +132,10 @@ export default class RavelProgressiveComposition extends RavelElement {
         this.performerIcon = [];
         this.performerSection = [];
         this.sections = 12;
+        this.autoplay = false;
+        this.autoplayTimer = null;
+        this.maxSection = 0;
+        this.minSection = 0;
     }
   
     setup() {
@@ -85,6 +160,21 @@ export default class RavelProgressiveComposition extends RavelElement {
             <span id="performer-${i}">${icon}</span>
             `;
         }
+        this.shadowRoot.querySelector(`#auto-play`).addEventListener('click', (evt) => {
+            this.autoplay = !this.autoplay;
+            if (this.autoplay) {
+                this.autoPlayTimer = setInterval(() => {
+                        this.moveRandomPerformer(this.performerSection[Math.floor(Math.random() * this.performers)]);
+                    },
+                    200
+                );
+                this.shadowRoot.querySelector(`#auto-play`).classList.add('pulse');
+            } else {
+                if (this.autoPlayTimer) clearInterval(this.autoPlayTimer);
+                this.shadowRoot.querySelector(`#auto-play`).classList.remove('pulse');
+            }
+        });
+        
     }
     
     moveRandomPerformer(section) {
@@ -99,8 +189,10 @@ export default class RavelProgressiveComposition extends RavelElement {
             if (this.performerSection[n] < (this.sections -1)) {
                 this.performerSection[n]++;
                 let p = this.shadowRoot.querySelector(`#performer-${n}`);
+                this.shadowRoot.querySelector(`#auto-play-indicator`).innerText = this.performerIcon[n];
                 console.log(p);
                 this.shadowRoot.querySelector(`#composition-grid-item-${this.performerSection[n]}`).appendChild(p);
+                if (this.performerSection[n] > this.maxSection) this.maxSection = this.performerSection[n];
             } 
         }
     }

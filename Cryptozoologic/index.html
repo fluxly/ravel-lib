@@ -8,14 +8,19 @@
     <script src="../libs/Box2d.min.js"></script>
     <script type="module">
         import "./cryptozoologic-mothman.js";
+        import "./cryptozoologic-pukwudgie.js";
+        import "./cryptozoologic-irish-yeti.js";
         import "../ravel-progressive-composition.js";
-         import "../ravel-slider.js";
+        import "../ravel-slider.js";
+        import "../ravel-switch.js";
+        import "../ravel-pot.js";
     </script>
 </head>
 <body>
 <div id="page-wrapper">
     <div id="hamburger">🍔</div>
-    <div id="share">👆</div>
+    <div id="reload">⟲</div>
+    <div id="share">💬</div>
 	<div id="nav-bar"><div id="title">CRYPTOZOOLOGIC</div></div>
     <div id="content-wrapper">
         <div id="menu-container">
@@ -47,7 +52,7 @@
                 await new Promise( resolve => setTimeout(resolve, 500));
                 document.querySelector('#game-container').classList.remove('slide-out-up');
                 document.querySelector('#game-container').style.display = "block";
-                document.querySelector('#game-container').innerHTML = `${element} <${element}></${element}>`;
+                document.querySelector('#game-container').innerHTML = `<${element}></${element}>`;
             });
         }
         document.querySelector(`#hamburger`).addEventListener('click', async (evt) => {

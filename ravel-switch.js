@@ -1,6 +1,7 @@
 import { RavelElement } from './ravel-element.js';
 import { ravelLibPath } from './ravel-lib-path.js';
 import globalStyles from './global-styles.js';
+import { RavelEmoji } from './RavelEmoji.js';
 
 export default class RavelSwitch extends RavelElement {
     static get localStyles() {
@@ -8,10 +9,7 @@ export default class RavelSwitch extends RavelElement {
         <style>
         #switch-container {
             display:inline-block;
-            border: 3px solid #aaaaaa;
-            border-radius: 20px;
-            padding: 0PX 10px;
-            cursor:pointer;background-color:#eeeeee;
+            cursor:pointer;
         }
         </style>
         `;
@@ -50,10 +48,10 @@ export default class RavelSwitch extends RavelElement {
         this.container = this.shadowRoot.querySelector('#switch-container');
         this.switchId = 0;
         this.type = 'toggle';
-        this.size = '50px';
+        this.size = '50';
         this.orientation = 'horizontal';
         this.states = 2;
-        this.state = 1;
+        this.state = 0;
         this.stateDir = 1;
         this.stateIcons = [ '⛔️', '🟢' ];
         this.stateSignals = [ `switch-${this.switchId}-off`, `switch-${this.switchId}-on` ];
@@ -62,8 +60,25 @@ export default class RavelSwitch extends RavelElement {
     setup() {
         this.observedMessages = ['toggle'];
         this.subscribe(this.observedMessages);
-        this.container.style['font-size'] = this.size;
-        this.container.style['border-radius'] = this.size;
+        this.container.style['font-size'] = `${this.size}px`;
+        if (this.stateIcons.length !== this.states.length) {
+            // Not enough icons in the attributes; generate
+            this.stateIcons = [];
+            for (let i = 0; i < this.states; i++) {
+                this.stateIcons.push(RavelEmoji.getRandomEmoji());
+            }
+        }
+        if (this.orientation === 'horizontal') {
+            this.container.style['border-bottom'] = '3px dotted #aaaaaa';
+            console.log(`${this.size / 2}px`);
+            this.container.style['height'] = `${this.size / 2}px`;
+        }
+        if (this.orientation === 'vertical') {
+            this.container.style['border-left'] = '3px dotted #aaaaaa';
+            console.log(`${this.size / 2}px`);
+            this.container.style['width'] = `${this.size / 2}px`;
+        }
+        console.log(this.stateIcons);
         for (let i = 0; i < this.states; i++) {
             let span = document.createElement('span');
             span.id = `state-${i}`;

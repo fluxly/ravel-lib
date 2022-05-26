@@ -12,13 +12,19 @@ body {
     font-size: 36px;
     position: fixed;
     top: 10px;
-    left: 10px;
+    left: 20px;
 }
 #share {
     font-size: 36px;
     position: fixed;
     top: 10px;
-    right: 10px;
+    right: 20px;
+}
+#reload {
+    font-size: 36px;
+    position: fixed;
+    top: 5px;
+    right: 70px;
 }
 #title {
     font-size:36px;
@@ -33,7 +39,7 @@ body {
     width: 100%;
 }
 #menu-container, #game-container {
-    border: 1px dotted red;
+    background-color: #000000;
     position: fixed;
     left: 50%;
     transform: translate(-50%, 0); 
@@ -44,8 +50,11 @@ body {
     grid: auto / auto auto auto auto;
     padding: 10px;
 }
+
 #game-container {
     display: none;
+    border:1px dotted red;
+    
 }
 .game-menu-item:hover {
     transform:scale(1.25);

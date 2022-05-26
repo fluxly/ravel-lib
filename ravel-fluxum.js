@@ -17,11 +17,17 @@ export default class RavelFluxum extends RavelElement {
             padding:4px 10px 4px 10px;
             border: 1px solid #333333;
         }
-        #eyes-open, #eyes-closed {
-            position:relative;
-        }
         #eyes-closed {
             display:none;
+        }
+        .green-glow {
+            box-shadow: 0px 0px 100px 100px rgba(45,255,196,0.9);
+        }
+        .red-glow {
+            box-shadow: 0px 0px 100px 100px rgba(255,0,0,0.9);
+        }
+        .yellow-glow {
+            box-shadow: 0px 0px 100px 100px rgba(255,255,0,0.9);
         }
         </style>
         `;
@@ -29,13 +35,13 @@ export default class RavelFluxum extends RavelElement {
   
     static get html() { 
         return `
+        <div id="container" >
+        <div id="icon" class="green-glow">😶</div>
+        </div>
         <div id="bubble-container">
-        <span id="bubble">Hello World 🐵</span>
+        <span id="bubble">Hello World 🐵😑</span>
         </div>
-        <div id="container">
-        <div id="icon"></div>
-        <div id="eyes"><img id="eyes-open" src="${ravelLibPath}/images/eyesOpen.png"/><img id="eyes-closed" src="${ravelLibPath}/images/eyesClosed.png"/></div>
-        </div>
+        
         `;
     }
  
@@ -65,21 +71,19 @@ export default class RavelFluxum extends RavelElement {
     initialize() {
         this.container = this.shadowRoot.querySelector('#container');
         this.icon = this.shadowRoot.querySelector('#icon');
-        this.open = this.shadowRoot.querySelector('#eyes-open');
-        this.closed = this.shadowRoot.querySelector('#eyes-closed');
+        //this.closed = this.shadowRoot.querySelector('#eyes-closed');
         this.bubble = this.shadowRoot.querySelector('#bubble-container');
     }
   
     setup() {
         this.observedMessages = ['message'];
         this.icon.style['font-size'] = `${this.size}px`;
+        this.icon.style['line-height'] = `${this.size}px`;
+        this.icon.style['width'] = `0px`;
+        this.icon.style['height'] = `0px`;
+        this.icon.style['border-radius'] = `${this.size}px`;
         this.container.style.left = `${this.x - (this.size / 2)}px`;
         this.container.style.top = `${this.y - (this.size / 2)}px`;
-        this.open.style.width = `${this.size}px`;
-        this.open.style.top = `${-(this.size * 1.15)}px`;
-        this.closed.style.width = `${this.size}px`;
-        this.closed.style.top = `${-(this.size * 1.15)}px`;
-        this.closed.style.left = `${-(this.size)}px`;
         this.bubble.style.left = `${this.x - (this.size * 2)}px`;
         this.bubble.style.top = `${this.y - (this.size * 1)}px`;
         //this.subscribe(this.observedMessages);   
@@ -97,7 +101,7 @@ export default class RavelFluxum extends RavelElement {
             this.y = Number(newValue);
         }
         if (name.includes('icon')) {
-            this.icon.innerText = RavelEmoji[newValue];
+            this.overlay.innerText = RavelEmoji[newValue];
         } 
         if (name.includes('size')) {
             this.size = parseInt(newValue, 10);

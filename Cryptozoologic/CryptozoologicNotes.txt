@@ -2,35 +2,35 @@ Size: 1500 x 1000
 Can be landscape or portrait
 All emojis. In general no text or numbers (Shempscape ok)
 
-
+(need 12)
 31 Days:
 Nessie : Granular
 Pukwudgie : Samples in Eno loops
 3 Shempscape : Bytebeat shufflebox
-1 Mothman : Progressive Composition 1
+1 Mothman : Progressive Composition 1 6 slots 6 players
 2 Irish Yeti : Euclydian polyrhythm
 Ozark Howler : three drawn waveforms modulate each other
 Bessie : plays samples on attack like Kate Bush bird piece
-Tessie
-Yak Shaver : rhythmicon with samples
+Tessie: feral vocaloid
+Yak Shaver : rhythmicon with samples 
 Whumpus : Palindromes
-Batsquatch
-Beast of Cardiff
-Donut Beast 
-Fluxly : Fluxly field recorder
-Jersey Devil
-Lizard Man
-Montauk Monster
-Murray
-Mothra
-Gorrog : Progressive Composition 2
+Batsquatch : Oramics
+Beast of Cardiff : Drum machine
+Donut Beast : http://umatic.nl/tonewheels_historical.html
+Fluxly : Fluxly field recorder 
+Jersey Devil :tenney-collage Sampling and montage, inspired by James Tenney, Collage #1 http://msp.ucsd.edu/pdrp/latest/doc/
+Lizard Man :chowning-stria FM synthesis and non-twelve-tone musical scales, inspired by Stria http://msp.ucsd.edu/pdrp/latest/doc/
+Montauk Monster :harvey-mortuos sinusoidal analysis and reconstruction of timbers, inspired by Mortuos Plango, Vivos Voco http://msp.ucsd.edu/pdrp/latest/doc/
+Murray : dodge-song, inspired by Charles Dodge, Speech Songs. http://msp.ucsd.edu/pdrp/latest/doc/
+Mograh : Progressive Composition 12 slots 12 players
+Gorrog : palindrome arrpegiator NxnxN: one minute buffer with pot controlling time to playback or on x sec of quiet(oct)
 Snake Scarecrow
-Vampire Unicorn
-Pirahua
-Vivian Ghastly
-Spark Boa
-Smoke Crow
-Beast of Baz
+Vampire Unicorn 
+Pirahua 
+Vivian Ghastly 
+Spark Boa 
+Smoke Crow 
+Beast of Baz : 
 Ningen
 Yowie
 Dark Thunderbird
@@ -39,18 +39,10 @@ Ogopogo
 
 
 
-- 
--- look at 120 years.net --
 
-In C
-SETI message generator Areceibo background
+-- look at 120 years.net --
 John Cage Williams mix
 2. : Farnell mammals patch
 4.  (apr) farnell poured liquids
 5.  (june)- ADAPT PD REPO TO FLUXLY TECH: http://msp.ucsd.edu/pdrp/latest/files/
 6.  (july)  http://umatic.nl/tonewheels_historical.html
-6.  (aug)
-Keyboard / MIDI interface
-7.  (sept)
-8. Nixonoxin palindrome arrpegiator NxnxN: one minute buffer with pot controlling time to playback or on x sec of quiet(oct)
-9. Vivian Loopbox(nov)
