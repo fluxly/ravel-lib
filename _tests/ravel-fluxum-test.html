@@ -13,21 +13,6 @@
 		}
 	</style>
     <script src="../libs/Box2d.min.js"></script>
-    <script>
-        var b2Vec2 = Box2D.Common.Math.b2Vec2
-        , b2AABB = Box2D.Collision.b2AABB
-        , b2BodyDef = Box2D.Dynamics.b2BodyDef
-        , b2Body = Box2D.Dynamics.b2Body
-        , b2FixtureDef = Box2D.Dynamics.b2FixtureDef
-        , b2Fixture = Box2D.Dynamics.b2Fixture
-        , b2World = Box2D.Dynamics.b2World
-        , b2MassData = Box2D.Collision.Shapes.b2MassData
-        , b2PolygonShape = Box2D.Collision.Shapes.b2PolygonShape
-        , b2CircleShape = Box2D.Collision.Shapes.b2CircleShape
-        , b2DebugDraw = Box2D.Dynamics.b2DebugDraw
-        ,  b2MouseJointDef =  Box2D.Dynamics.Joints.b2MouseJointDef
-        ;
-    </script>
 	<script type="module">
         import "../ravel-physics-world.js";
 		import "../ravel-fluxum.js";
@@ -37,7 +22,11 @@
 <body>
 <div id="page-wrapper">
     <ravel-physics-world>
-	<ravel-fluxum size="50" x="300" y="300" glow="green"></ravel-fluxum>
+	<ravel-fluxum  id="fluxum-1" class="fluxum" size="75" x="300" y="300" color="green"></ravel-fluxum>
+    <ravel-fluxum  id="fluxum-2" class="fluxum" size="150" x="500" y="500" color="yellow"></ravel-fluxum>
+	<ravel-fluxum  id="fluxum-3" class="fluxum" size="75" x="300" y="300" color="green"></ravel-fluxum>
+	<ravel-fluxum  id="fluxum-5" class="fluxum" size="75" x="300" y="300" color="green"></ravel-fluxum>
+    <ravel-fluxum  id="fluxum-6" class="fluxum" size="25" x="500" y="500" color="yellow"></ravel-fluxum>
     </ravel-physics-world>
 </div>
 </body>

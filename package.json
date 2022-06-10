@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "liquidfun-emscripten": "^1.1.4"
+    "liquidfun-emscripten": "^1.1.4",
+    "tone": "^14.8.40"
   }
 }

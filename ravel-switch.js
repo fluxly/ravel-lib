@@ -103,7 +103,7 @@ export default class RavelSwitch extends RavelElement {
     }
     
     teardown() {
-       // this.unsubscribe(this.observedMessages);
+        this.unsubscribe(this.observedMessages);
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
@@ -111,12 +111,12 @@ export default class RavelSwitch extends RavelElement {
             this.size = Number(newValue);
         }
         if (name === 'x') {
-            this.container.style.position = 'fixed';
+            this.container.style.position = 'absolute';
             this.x = newValue;
             this.container.style.left = newValue;
         }
         if (name === 'y') {
-            this.container.style.position = 'fixed';
+            this.container.style.position = 'absolute';
             this.y = newValue;
             this.container.style.top = newValue;
         }

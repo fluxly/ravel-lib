@@ -38,7 +38,7 @@ body {
     height: 95vh;
     width: 100%;
 }
-#menu-container, #game-container {
+#menu-container {
     background-color: #000000;
     position: fixed;
     left: 50%;
@@ -53,6 +53,13 @@ body {
 
 #game-container {
     display: none;
+    background-color: #000000;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0); 
+    top: 10vh;
+    height: 85vh;
+    width: calc(.75 * 85vh);
     border:1px dotted red;
     
 }
@@ -78,8 +85,8 @@ body {
     opacity: 1;
   }
   100% {
-    -webkit-transform: translate(-50%,-1000px);
-            transform: translate(-50%,-1000px);
+    -webkit-transform: translate(-50%,-2000px);
+            transform: translate(-50%,-2000px);
     opacity: 1;
   }
 }
@@ -90,8 +97,8 @@ body {
     opacity: 1;
   }
   100% {
-    -webkit-transform: translate(-50%,-1000px);
-            transform: translate(-50%,-1000px);
+    -webkit-transform: translate(-50%,-2000px);
+            transform: translate(-50%,-2000px);
     opacity: 1;
   }
 }
@@ -101,8 +108,8 @@ body {
 }
 @-webkit-keyframes slide-in-down {
   0% {
-    -webkit-transform: translate(-50%,-1000px);
-            transform: translate(-50%,-1000px);
+    -webkit-transform: translate(-50%,-2000px);
+            transform: translate(-50%,-2000px);
     opacity: 1;
   }
   100% {
@@ -113,8 +120,8 @@ body {
 }
 @keyframes slide-in-down {
   0% {
-    -webkit-transform: translate(-50%,-1000px);
-            transform: translate(-50%,-1000px);
+    -webkit-transform: translate(-50%,-2000px);
+            transform: translate(-50%,-2000px);
     opacity: 1;
   }
   100% {

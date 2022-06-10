@@ -56,34 +56,36 @@ export default class RavelPot extends RavelElement {
         this.marker = 'black-circle';
         this.icon = 'white-circle';
         this.size = 24;
+        this.signals = [];
     }
   
     setup() {
-        this.observedMessages = ['message'];
-        //this.subscribe(this.observedMessages);  
+        this.subscribe(this.signals);  
         this.potKnob.textContent = RavelEmoji.getRandomRoundEmoji();
         this.potMarker .textContent = RavelEmoji['white-circle']; // 
         this.container.style['font-size'] = `${this.size}px`;
+        this.container.style['line-height'] = `${this.size}px`;
+        this.container.style['padding'] = `10px`;
         this.container.style['width'] = `${this.size}px`;
         this.container.style['height'] = `${this.size}px`;
         this.potMarker.style['font-size'] = `${this.size / 5}px`;
         this.potMarker.style['top'] = `-${this.size - this.size / 16}px`;
         this.potMarker.style['left'] = `${- this.size /  4 }px`;
-        this.potKnob.style['line-height'] = `-${this.size}px`;
-        this.potKnob.style['top'] = `-${this.size / 8}px`;
+        this.potKnob.style['line-height'] = `-${this.size + 10}px`;
+        //this.potKnob.style['top'] = `-${this.size / 8}px`;
         this.potMarker.style['opacity'] = `0.75`;
         // x, y are the center point
         this.centerX = this.container.getBoundingClientRect().left + this.size / 2;
         this.centerY = this.container.getBoundingClientRect().top + this.size / 2;
-        this.addEventListener('mousedown', (e) => { 
-           // console.log("mousedown");
+        this.addEventListener('pointerdown', (e) => { 
+           // console.log("pointerdown");
             e.preventDefault();
             this.calculatePotAngle(e.clientX, e.clientY);
             this.mouseMoveCallback = this.dragElement.bind(this); 
             this.mouseUpCallback = this.endDragElement.bind(this);
-            document.addEventListener('mousemove', this.mouseMoveCallback);
-            document.addEventListener('mouseup', this.mouseUpCallback);
-            document.addEventListener('mouseleave', this.mouseUpCallback);
+            document.addEventListener('pointermove', this.mouseMoveCallback);
+            document.addEventListener('pointerup', this.mouseUpCallback);
+            document.addEventListener('pointerleave', this.mouseUpCallback);
   	  });
     }
     
@@ -94,14 +96,14 @@ export default class RavelPot extends RavelElement {
     }
     
     endDragElement() {
-        document.removeEventListener('mousemove', this.mouseMoveCallback);
-        document.removeEventListener('mouseup', this.mouseUpCallback);
+        document.removeEventListener('pointermove', this.mouseMoveCallback);
+        document.removeEventListener('pointerup', this.mouseUpCallback);
         document.removeEventListener('mouseout', this.mouseUpCallback);
         document.removeEventListener('mouseleave', this.mouseUpCallback);
     }
     
     teardown() {
-       // this.unsubscribe(this.observedMessages);
+       this.unsubscribe(this.signals);
     }
     
     calculatePotAngle(x, y) {

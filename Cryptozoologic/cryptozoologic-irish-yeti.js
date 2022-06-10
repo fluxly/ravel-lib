@@ -6,12 +6,12 @@ export default class CryptozoologicIrishYeti extends HTMLElement {
         #pot-container {
             display: grid;
             grid: 100px/ 25% 25% 25% 25%;;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
         #slider-container {
             display: grid;
-            grid: 60px 60px 60px 60px/ 100%;
-            margin-bottom: 30px;
+            grid: 30px 60px 30px 60px 20px 60px 30px 60px/ 100%;
+            margin-bottom: 10px;
         }
         #switch-container {
             display: grid;
@@ -21,6 +21,7 @@ export default class CryptozoologicIrishYeti extends HTMLElement {
             display: flex;
             justify-content: center;
             align-items: center;
+
         }
         </style>
         `;
@@ -35,10 +36,15 @@ export default class CryptozoologicIrishYeti extends HTMLElement {
         <ravel-pot size="50" class="cell" marker="white-circle"></ravel-pot>
         </div>
         <div id="slider-container">
-        <ravel-slider size="50" sliders="2" length="450"></ravel-slider>
-        <ravel-slider size="50" sliders="2" length="450"></ravel-slider>
-        <ravel-slider size="50" sliders="2" length="450"></ravel-slider>
-        <ravel-slider size="50" sliders="2" length="450"></ravel-slider>
+        <ravel-slider class="cell" size="50" sliders="2" length="450"></ravel-slider>
+        <ravel-sequence class="cell" icon-active="⚪️" icon-inactive="⬛️" cells="20" size="20"></ravel-sequence>
+        <ravel-slider class="cell" size="50" sliders="2" length="450"></ravel-slider>
+        <ravel-sequence class="cell" icon-active="⚪️" icon-inactive="⬛️" cells="20" size="20"></ravel-sequence>
+        <ravel-slider class="cell" size="50" sliders="2" length="450"></ravel-slider>
+        <ravel-sequence class="cell" icon-active="⚪️" icon-inactive="⬛️" icon-active="⚪️" icon-inactive="⬛️" cells="20" size="20"></ravel-sequence>
+        <ravel-slider class="cell" size="50" sliders="2" length="450"></ravel-slider>
+        <ravel-sequence class="cell"  icon-active="⚪️" icon-inactive="⬛️" cells="20" size="20"></ravel-sequence>
+
         </div>
         <div id="switch-container">
         <ravel-switch states="4" class="cell" state-signals="one,two,three,four" size="36"></ravel-switch>

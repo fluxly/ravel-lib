@@ -6,9 +6,9 @@ All emojis. In general no text or numbers (Shempscape ok)
 31 Days:
 Nessie : Granular
 Pukwudgie : Samples in Eno loops
-3 Shempscape : Bytebeat shufflebox
-1 Mothman : Progressive Composition 1 6 slots 6 players
-2 Irish Yeti : Euclydian polyrhythm
+Shempscape : Bytebeat shufflebox
+Mothman : Progressive Composition 1 6 slots 6 players
+Irish Yeti : Euclydian polyrhythm
 Ozark Howler : three drawn waveforms modulate each other
 Bessie : plays samples on attack like Kate Bush bird piece
 Tessie: feral vocaloid
@@ -24,7 +24,9 @@ Montauk Monster :harvey-mortuos sinusoidal analysis and reconstruction of timber
 Murray : dodge-song, inspired by Charles Dodge, Speech Songs. http://msp.ucsd.edu/pdrp/latest/doc/
 Mograh : Progressive Composition 12 slots 12 players
 Gorrog : palindrome arrpegiator NxnxN: one minute buffer with pot controlling time to playback or on x sec of quiet(oct)
-Snake Scarecrow
+Snake Scarecrow: Last Alley Maze: : F Bb : D# G# : : C# F# : : B E A : :
+                                    A F# D# E C# G# Bb F G# B Bb 
+                                    F A E C# F# Bb D# B G# E G# E B D# Bb F# C# F C# F
 Vampire Unicorn 
 Pirahua 
 Vivian Ghastly 
@@ -37,6 +39,8 @@ Dark Thunderbird
 Ogopogo
 
 
+Samples sources here:
+https://philharmonia.co.uk/resources/sound-samples/
 
 
 

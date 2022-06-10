@@ -1,4 +1,4 @@
-//import  { RavelMesseges }  from "../RavelMesseges.js"
+import  { RavelMessages }  from './RavelMessages.js';
 
 export class RavelElement extends HTMLElement {
 	
@@ -7,18 +7,18 @@ export class RavelElement extends HTMLElement {
 	}
 	
 	sendMessage(msg, cmd, content) {
-		//UnrulyMesseges.sendMessage(msg, cmd, content);
+		RavelMessages.sendMessage(msg, cmd, content);
 	}
 
 	subscribe(msgList) {
         for (let msg of msgList) {
-            //UnrulyMesseges.subscribe(msg, this);
+            RavelMessages.subscribe(msg, this);
 		}
 	}
 	
 	unsubscribe(msgList) {
 		for (let msg of msgList) {
-			//UnrulyMesseges.unsubscribe(msg, this);
+			RavelMessages.unsubscribe(msg, this);
 		}
 	}
     checkCommonAttributes(name, oldValue, newValue) {

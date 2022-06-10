@@ -15,6 +15,7 @@ export default class RavelSlider extends RavelElement {
             position: absolute;
         }
         #slider-handle-2 {
+            display:none;
             float:right;
         }
         </style>
@@ -75,11 +76,15 @@ export default class RavelSlider extends RavelElement {
         if (this.orientation === 'horizontal') {
             this.container.style['width'] = `${this.length}px`;
             this.container.style['height'] = `${this.size / 2 + 4 }px`;
+            this.container.style['margin-bottom'] = `${this.size / 2 }px`;
             this.container.style['border-bottom'] = `3px dotted #aaaaaa`;
+            this.handle2.style.left = `${this.length - this.size}px`;
         } else {
             this.container.style['width'] = `${this.size / 2}px`;
             this.container.style['height'] = `${this.length}px`;
             this.container.style['border-right'] = `3px dotted #aaaaaa`;
+            this.container.style['margin-right'] = `${this.size / 2 }px`;
+            this.handle2.style.top = `${this.length - this.size}px`;
         }
         if (this.sliders === 2) this.handle2.style.display = 'block';
         // TODO: set the position of the handle for passed in attributes
@@ -191,19 +196,19 @@ export default class RavelSlider extends RavelElement {
         if (name === 'orientation') {
             this.orientation = newValue;
         }
-        if (name.includes('slider-id')) {
+        if (name === 'slider-id') {
             this.sliderId = newValue;
         }
-        if (name.includes('sliders')) {
-            this.sliders = newValue;
+        if (name === 'sliders') {
+            this.sliders = parseInt(newValue, 10);
         }
-        if (name.includes('length')) {
+        if (name === 'length') {
             this.length = Number(newValue);
         }
         if (name === 'value') {
             this.value = Number(newValue);
         }
-        if (name.includes('signals')) {
+        if (name === 'signals') {
             this.signal = newValue.split(',');
         }
     }
