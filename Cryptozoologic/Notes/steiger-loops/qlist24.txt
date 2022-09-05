@@ -1,0 +1,98 @@
+0 0 # --------------- STARTUP (event 24, measure 354, beat 1) --------------;
+
+fl-multitap-switch 0;
+vc-pshift-switch 0;
+
+fl-loopdel-switch 0;
+bc-loopdel-switch 0;
+pc-loopdel-switch 0;
+vn-loopdel-switch 0;
+vc-loopdel-switch 0;
+
+pc-atten 95;
+pc-loc 40;
+pc-spread 0;
+pc-rev 90;
+
+pcfx-atten 90;
+pcfx-loc 40;
+pcfx-spread 0;
+pcfx-rev 0;
+
+vc-atten 95;
+vc-loc 50;
+vc-spread 0;
+vc-rev 90;
+
+vcfx-atten 90;
+vcfx-loc 50;
+vcfx-spread 0;
+vcfx-rev 0;
+
+vn-atten 95;
+vn-loc 70;
+vn-spread 0;
+vn-rev 90;
+
+vnfx-atten 90; 
+vnfx-loc 70;
+vnfx-spread 0;
+vnfx-rev 0;
+
+fl-atten 95;
+fl-loc 30;
+fl-spread 0;
+fl-rev 90;
+
+flfx-atten 90;
+flfx-loc 30;
+flfx-spread 0;
+flfx-rev 90;
+
+bc-atten 95;
+bc-loc 10;
+bc-spread 0;
+bc-rev 90;
+
+bcfx-atten 90;
+bcfx-loc 10;
+bcfx-spread 0;
+bcfx-rev 90;
+
+fl-del1 150;
+fl-fback 30;
+bc-del1 150;
+bc-fback 30;
+pc-del1 150;
+pc-fback 30;
+vc-del1 150;
+vc-fback 30;
+vn-del1 150;
+vn-fback 30;
+
+0 1 # --------------- EVENT 25, measure 360, beat 1 -------------------;
+
+
+fl-loopdel-switch 1;
+bc-loopdel-switch 1;
+pc-loopdel-switch 1;
+vn-loopdel-switch 1;
+vc-loopdel-switch 1;
+
+0 2 # --------------- EVENT 26, end, all off -------------------;
+
+fl-atten 0;
+bc-atten 0;
+pc-atten 0;
+vn-atten 0;
+vc-atten 0;
+
+flfx-atten 0;
+bcfx-atten 0;
+pcfx-atten 0;
+vnfx-atten 0;
+vcfx-atten 0;
+
+fl-delatten 0;
+
+10 section-number 0;

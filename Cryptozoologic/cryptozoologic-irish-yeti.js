@@ -9,9 +9,10 @@ export default class CryptozoologicIrishYeti extends HTMLElement {
             margin-bottom: 10px;
         }
         #slider-container {
-            display: grid;
-            grid: 30px 60px 30px 60px 20px 60px 30px 60px/ 100%;
-            margin-bottom: 10px;
+            width: 100%;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
         }
         #switch-container {
             display: grid;
@@ -36,7 +37,7 @@ export default class CryptozoologicIrishYeti extends HTMLElement {
         <ravel-pot size="50" class="cell" marker="white-circle"></ravel-pot>
         </div>
         <div id="slider-container">
-        <ravel-slider class="cell" size="50" sliders="2" length="450"></ravel-slider>
+        <ravel-slider class="cell" size="50" sliders="2"></ravel-slider>
         <ravel-sequence class="cell" icon-active="⚪️" icon-inactive="⬛️" cells="20" size="20"></ravel-sequence>
         <ravel-slider class="cell" size="50" sliders="2" length="450"></ravel-slider>
         <ravel-sequence class="cell" icon-active="⚪️" icon-inactive="⬛️" cells="20" size="20"></ravel-sequence>

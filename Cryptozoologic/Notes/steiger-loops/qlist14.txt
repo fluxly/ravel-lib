@@ -1,0 +1,101 @@
+0 0 # --------------- startup -- EVENT 14, measure 150, beat 1 -----------;
+
+# starting at 159 the machine operator should manually hit the 'twist' button
+  with each major phrase change until cue 16;
+
+fl-motorboat 0;
+
+fl-atten 95;
+fl-rev 90;
+fl-spread 0;
+fl-loc 40 300;
+
+fl-multitap-switch 0;
+
+fl-loopdel-switch 1;
+bc-loopdel-switch 1;
+pc-loopdel-switch 1;
+vn-loopdel-switch 1;
+vc-loopdel-switch 1;
+
+pc-atten 95;
+pc-loc 40;
+pc-spread 0;
+pc-rev 90;
+
+pcfx-atten 90;
+pcfx-loc 40;
+pcfx-spread 0;
+pcfx-rev 0;
+
+vc-atten 95;
+vc-loc 50;
+vc-spread 0;
+vc-rev 90;
+
+vcfx-atten 90;
+vcfx-loc 50;
+vcfx-spread 0;
+vcfx-rev 0;
+
+vn-atten 95;
+vn-loc 70;
+vn-spread 0;
+vn-rev 90;
+
+vnfx-atten 90; 
+vnfx-loc 70;
+vnfx-spread 0;
+vnfx-rev 0;
+
+fl-atten 95;
+fl-loc 30;
+fl-spread 0;
+fl-rev 90;
+
+flfx-atten 90;
+flfx-loc 30;
+flfx-spread 0;
+flfx-rev 90;
+
+bc-atten 95;
+bc-loc 10;
+bc-spread 0;
+bc-rev 90;
+
+bcfx-atten 90;
+bcfx-loc 10;
+bcfx-spread 0;
+bcfx-rev 90;
+
+fl-del1 180;
+fl-fback 30;
+bc-del1 160;
+bc-fback 30;
+pc-del1 140;
+pc-fback 30;
+vc-del1 160;
+vc-fback 30;
+vn-del1 150;
+vn-fback 30;
+
+fl-del1 240;
+bc-del1 230;
+pc-del1 200;
+vc-del1 220;
+vn-del1 210;
+
+
+0 1 # --------------- EVENT 15, measure 213, beat 1 -------------------;
+
+fl-fback 60;
+bc-fback 60;
+pc-fback 60;
+vc-fback 60;
+vn-fback 60;
+
+0 2 # --------------- EVENT 16, measure 238, beat 1, flute cadenza ----------;
+
+10 section-number 16;
+
+

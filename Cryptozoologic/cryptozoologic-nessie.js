@@ -3,12 +3,21 @@ export default class CryptozoologicNessie extends HTMLElement {
     static get localStyles() {
         return `
         <style>
-        #pot-container {
-            display: grid;
-            grid: 140px 140px 140px/ 50% 50%;
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+        #slider-container {
+            width: 100%;
+        }
+        .pot-container {
+            display: flex;
+            justify-content: space-around;
             margin-bottom: 30px;
         }
-        #switch-container {
+        .switch-container {
             display: grid;
             grid: 40px 40px 40px/ 100%;
         }
@@ -23,18 +32,26 @@ export default class CryptozoologicNessie extends HTMLElement {
   
     static get html() { 
         return `
-
-        <div id="slider-container">
-       <ravel-slider class="cell" size="50" sliders="1" length="450"></ravel-slider>
+        <div id="container">
+        
+        <div class="pot-container">
+        <ravel-pot size="100" class="cell" marker="white-circle"></ravel-pot>
+        <ravel-pot size="100" class="cell" marker="white-circle"></ravel-pot>
+        </div>
+        <div class="slider-container">
         <ravel-slider class="cell" size="50" sliders="1" length="450"></ravel-slider>
         </div>
-        <div id="pot-container">
+        <div class="pot-container">
         <ravel-pot size="100" class="cell" marker="white-circle"></ravel-pot>
         <ravel-pot size="100" class="cell" marker="white-circle"></ravel-pot>
+        </div>
+        <div class="slider-container">
+        <ravel-slider class="cell" size="50" sliders="1" length="450"></ravel-slider>
+        </div>
+        <div class="pot-container">
         <ravel-pot size="100" class="cell" marker="white-circle"></ravel-pot>
         <ravel-pot size="100" class="cell" marker="white-circle"></ravel-pot>
-        <ravel-pot size="100" class="cell" marker="white-circle"></ravel-pot>
-        <ravel-pot size="100" class="cell" marker="white-circle"></ravel-pot>
+        </div>
         </div>
         `;
     }

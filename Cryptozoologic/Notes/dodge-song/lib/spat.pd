@@ -1,0 +1,21 @@
+#N canvas 1069 242 470 320 10;
+#X floatatom 71 89 5 0 100 0 #1-dist #1-dist-set #1-dist;
+#N canvas 1132 735 471 400 ctls 0;
+#X obj 32 95 setline \$1-dist;
+#X obj 32 116 setline \$1-angle;
+#X obj 32 138 setline \$1-radius;
+#X obj 32 159 setline \$1-spread;
+#X obj 250 45 r reset;
+#X obj 250 86 del 20;
+#X obj 250 109 symbol \$1;
+#X obj 250 65 t b;
+#X msg 250 130 \; \$1-spread 100 \; \$1-dist 20 \; \$1-angle 0 \; \$1-radius
+100 \;;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 7 0 5 0;
+#X restore 147 218 pd ctls;
+#X floatatom 74 107 5 0 0 0 #1-angle #1-angle-set #1-angle;
+#X floatatom 74 126 5 0 150 0 #1-radius #1-radius-set #1-radius;
+#X floatatom 75 143 5 0 100 0 #1-spread #1-spread-set #1-spread;

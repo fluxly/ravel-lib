@@ -1,0 +1,371 @@
+#N canvas 446 236 861 529 10;
+#X obj 302 20 table tab-in1;
+#X obj 302 40 table tab-in2;
+#X obj 303 61 table tab-in3;
+#X obj 302 83 table tab-in4;
+#X obj 302 104 table tab-in5;
+#X obj 27 438 tabplay~ tab-in1;
+#X obj 51 93 loadbang;
+#X msg 51 135 read -resize /home/msp/bis/sound/house/billie.wav tab-in1
+;
+#X obj 54 256 soundfiler;
+#X obj 54 281 / 44.1;
+#X floatatom 54 314 0 0 0;
+#X obj 51 114 bng 15 250 50 0 empty empty empty 20 8 0 10 -262144 -1
+-1;
+#X obj 23 384 metro;
+#X obj 23 357 toggle 15 0 empty empty empty 20 8 0 10 -262144 -1 -1
+0 1;
+#X msg 23 410 0;
+#X obj 81 385 sel 0;
+#X obj 25 485 throw~ d1~;
+#X msg 81 410 stop;
+#X msg 115 314 5430;
+#X obj 192 272 soundfiler;
+#X obj 192 297 / 44.1;
+#X floatatom 192 321 6 0 0;
+#X obj 158 384 metro;
+#X obj 158 357 toggle 15 0 empty empty empty 20 8 0 10 -262144 -1 -1
+0 1;
+#X msg 158 410 0;
+#X obj 216 385 sel 0;
+#X msg 216 410 stop;
+#X msg 186 158 read -resize /home/msp/bis/sound/house/ondar.wav tab-in2
+;
+#X obj 162 438 tabplay~ tab-in2;
+#X obj 162 488 throw~ d2~;
+#X obj 439 272 soundfiler;
+#X obj 439 297 / 44.1;
+#X floatatom 439 326 6 0 0;
+#X obj 436 389 metro;
+#X obj 436 362 toggle 15 0 empty empty empty 20 8 0 10 -262144 -1 -1
+0 1;
+#X obj 494 390 sel 0;
+#X msg 494 415 stop;
+#X obj 440 469 throw~ d4~;
+#X msg 436 415 4700;
+#X msg 496 326 11091;
+#X obj 440 443 tabplay~ tab-in4;
+#X msg 345 212 read -resize /home/msp/bis/sound/house/joni.wav tab-in4
+;
+#X obj 161 463 *~ 4;
+#X obj 587 282 soundfiler;
+#X obj 587 307 / 44.1;
+#X floatatom 586 330 6 0 0;
+#X obj 557 390 metro;
+#X obj 557 363 toggle 15 0 empty empty empty 20 8 0 10 -262144 -1 -1
+0 1;
+#X obj 615 391 sel 0;
+#X msg 615 416 stop;
+#X msg 409 234 read -resize /home/msp/bis/sound/ham/Hamburger.wav tab-in5
+;
+#X obj 561 444 tabplay~ tab-in5;
+#X obj 561 490 throw~ d5~;
+#X msg 557 416 0;
+#X obj 755 342 toggle 15 0 empty empty empty 20 8 0 10 -262144 -1 -1
+0 1;
+#X obj 561 467 *~ 2;
+#X msg 226 187 read -resize /home/msp/bis/sound/house/nusrat.wav tab-in3
+;
+#X obj 330 275 soundfiler;
+#X obj 330 300 / 44.1;
+#X floatatom 330 324 6 0 0;
+#X obj 296 387 metro;
+#X obj 296 360 toggle 15 0 empty empty empty 20 8 0 10 -262144 -1 -1
+0 1;
+#X msg 296 413 0;
+#X obj 354 388 sel 0;
+#X msg 354 413 stop;
+#X obj 300 441 tabplay~ tab-in3;
+#X obj 299 466 *~ 2;
+#X obj 300 491 throw~ d3~;
+#X obj 26 463 *~ 0.7;
+#X msg 757 424 0;
+#X obj 757 400 r playem;
+#X obj 706 379 r stopem;
+#X obj 704 401 bng 15 250 50 0 empty empty empty 20 8 0 8 -262144 -1
+-1;
+#X obj 74 27 bng 15 250 50 0 sf-sec1 empty empty 20 8 0 8 -262144 -1
+-1;
+#X text 99 25 section 1;
+#X obj 75 47 bng 15 250 50 0 sf-sec2 empty empty 20 8 0 8 -262144 -1
+-1;
+#X text 100 45 section 2;
+#N canvas 41 263 1075 843 /SUBPATCH/ 0;
+#X obj 38 174 r clearem;
+#X obj 185 10 r sf-sec1;
+#X obj 28 102 r soundfiler;
+#X obj 28 127 soundfiler;
+#X obj 187 84 r sf-sec2;
+#X obj 188 194 r sf-sec3;
+#X msg 38 201 \; tab-in1 resize 100 \; tab-in2 resize 100 \; tab-in3
+resize 100 \; tab-in4 resize 100 \; tab-in5 resize 100 \; tab-in1 const
+0 \; tab-in2 const 0 \; tab-in3 const 0 \; tab-in4 const 0 \; tab-in5
+const 0;
+#X obj 25 793 throw~ d1~;
+#X obj 25 767 readsf~ 1;
+#X obj 16 548 r read1a;
+#X msg 59 598 set \$1;
+#X obj 17 596 t b s;
+#X obj 22 698 del 1000;
+#X msg 22 722 1;
+#X obj 193 317 r sf-sec4;
+#X obj 58 721 r stopem;
+#X msg 58 743 0;
+#X obj 16 571 unpack s s f;
+#X obj 32 644 pack s 0;
+#X msg 32 672 0 \, open \$1 \$2;
+#X obj 142 795 throw~ d1~;
+#X obj 142 769 readsf~ 1;
+#X msg 176 600 set \$1;
+#X obj 134 598 t b s;
+#X obj 139 700 del 1000;
+#X msg 139 724 1;
+#X obj 175 723 r stopem;
+#X msg 175 745 0;
+#X obj 133 573 unpack s s f;
+#X obj 149 646 pack s 0;
+#X msg 149 674 0 \, open \$1 \$2;
+#X obj 253 796 throw~ d1~;
+#X obj 253 770 readsf~ 1;
+#X msg 287 601 set \$1;
+#X obj 245 599 t b s;
+#X obj 250 701 del 1000;
+#X msg 250 725 1;
+#X obj 286 724 r stopem;
+#X msg 286 746 0;
+#X obj 244 574 unpack s s f;
+#X obj 260 647 pack s 0;
+#X msg 260 675 0 \, open \$1 \$2;
+#X obj 368 798 throw~ d1~;
+#X msg 402 603 set \$1;
+#X obj 360 601 t b s;
+#X obj 365 703 del 1000;
+#X msg 365 727 1;
+#X obj 401 726 r stopem;
+#X msg 401 748 0;
+#X obj 375 649 pack s 0;
+#X msg 375 677 0 \, open \$1 \$2;
+#X obj 133 550 r read1b;
+#X obj 244 551 r read1c;
+#X obj 359 553 r read2a;
+#X obj 359 576 unpack s s s f;
+#X obj 368 772 readsf~ 2;
+#X obj 442 798 throw~ d1~;
+#X msg 420 625 set \$1;
+#X obj 527 800 throw~ d1~;
+#X msg 561 605 set \$1;
+#X obj 519 603 t b s;
+#X obj 524 705 del 1000;
+#X msg 524 729 1;
+#X obj 560 728 r stopem;
+#X msg 560 750 0;
+#X obj 534 651 pack s 0;
+#X msg 534 679 0 \, open \$1 \$2;
+#X obj 518 578 unpack s s s f;
+#X obj 527 774 readsf~ 2;
+#X obj 601 800 throw~ d1~;
+#X msg 579 627 set \$1;
+#X obj 518 555 r read2b;
+#X msg 185 34 \; clearem bang \; read1a /home/msp/bis/loopsound/fl1to26.aiff
+d1~ 0;
+#X msg 187 106 \; clearem bang \; read1a /home/msp/bis/loopsound/fl26to86.aiff
+d1~ 0 \; read1b /home/msp/bis/loopsound/bcl26to86.aiff d2~ 0 \; read1c
+/home/msp/bis/loopsound/perc.26to86.aiff d3~ 0 \; read2a /home/msp/bis/loopsound/VlnVc26to86.aiff
+d5~ d4~ 0;
+#X msg 188 217 \; clearem bang \; read2a /home/msp/bis/loopsound/pic_bcl_82to137.aiff
+d1~ d2~ 0 \; read1a /home/msp/bis/loopsound/perc.82to137.aiff d3~ 0
+\; read2b /home/msp/bis/loopsound/VlnVc82to137.aiff d5~ d4~ 0;
+#X msg 193 344 \; clearem bang \; read1a /home/msp/bis/loopsound/fl.266to360.aiff
+d1~ 700000 \; read1b /home/msp/bis/loopsound/bcl.266to360.aiff d2~
+700000 \; read2a /home/msp/bis/loopsound/perc.266to360.aiff d3~ d3~
+700000 \; read2b /home/msp/bis/loopsound/VlnVc266to360.aiff d5~ d4~
+700000 \;;
+#X obj 635 90 r sf-cadenza2;
+#X msg 635 114 \; clearem bang \; read1a /home/msp/bis/loopsound/flt.cad.2.aiff
+d1~ \;;
+#X obj 643 201 r sf-cadenza3;
+#X msg 643 225 \; clearem bang \; read1a /home/msp/bis/loopsound/flt.cad.3.aiff
+d1~ \;;
+#X obj 636 322 r sf-sec9;
+#X msg 636 349 \; clearem bang \; read1a /home/msp/bis/loopsound/flt.150to237.aiff
+d1~ \; read1b /home/msp/bis/loopsound/bcl.150to267.aiff d2~ \; read2a
+/home/msp/bis/loopsound/perc.150-236.aiff d3~ d3~ 132000 \; read2b
+/home/msp/bis/loopsound/VlnVc150to267.aiff d5~ d4~ \;;
+#X obj 637 471 r sf-sec5;
+#X msg 638 498 \; clearem bang \; read1a /home/msp/bis/loopsound/pic.359toEnd.aiff
+d1~ 700000 \; read1b /home/msp/bis/loopsound/bcl359toEnd.aiff d2~ 700000
+\; read2a /home/msp/bis/loopsound/perc.359toEnd.aiff d3~ d3~ 700000
+\; read2b /home/msp/bis/loopsound/VlnVc359toEnd.aiff d5~ d4~ 700000
+\;;
+#X connect 0 0 6 0;
+#X connect 1 0 72 0;
+#X connect 2 0 3 0;
+#X connect 4 0 73 0;
+#X connect 5 0 74 0;
+#X connect 8 0 7 0;
+#X connect 9 0 17 0;
+#X connect 10 0 7 0;
+#X connect 11 0 12 0;
+#X connect 11 1 18 0;
+#X connect 12 0 13 0;
+#X connect 13 0 8 0;
+#X connect 14 0 75 0;
+#X connect 15 0 16 0;
+#X connect 16 0 8 0;
+#X connect 17 0 11 0;
+#X connect 17 1 10 0;
+#X connect 17 2 18 1;
+#X connect 18 0 19 0;
+#X connect 19 0 8 0;
+#X connect 21 0 20 0;
+#X connect 22 0 20 0;
+#X connect 23 0 24 0;
+#X connect 23 1 29 0;
+#X connect 24 0 25 0;
+#X connect 25 0 21 0;
+#X connect 26 0 27 0;
+#X connect 27 0 21 0;
+#X connect 28 0 23 0;
+#X connect 28 1 22 0;
+#X connect 28 2 29 1;
+#X connect 29 0 30 0;
+#X connect 30 0 21 0;
+#X connect 32 0 31 0;
+#X connect 33 0 31 0;
+#X connect 34 0 35 0;
+#X connect 34 1 40 0;
+#X connect 35 0 36 0;
+#X connect 36 0 32 0;
+#X connect 37 0 38 0;
+#X connect 38 0 32 0;
+#X connect 39 0 34 0;
+#X connect 39 1 33 0;
+#X connect 39 2 40 1;
+#X connect 40 0 41 0;
+#X connect 41 0 32 0;
+#X connect 43 0 42 0;
+#X connect 44 0 45 0;
+#X connect 44 1 49 0;
+#X connect 45 0 46 0;
+#X connect 46 0 55 0;
+#X connect 47 0 48 0;
+#X connect 48 0 55 0;
+#X connect 49 0 50 0;
+#X connect 50 0 55 0;
+#X connect 51 0 28 0;
+#X connect 52 0 39 0;
+#X connect 53 0 54 0;
+#X connect 54 0 44 0;
+#X connect 54 1 43 0;
+#X connect 54 2 57 0;
+#X connect 54 3 49 1;
+#X connect 55 0 42 0;
+#X connect 55 1 56 0;
+#X connect 57 0 56 0;
+#X connect 59 0 58 0;
+#X connect 60 0 61 0;
+#X connect 60 1 65 0;
+#X connect 61 0 62 0;
+#X connect 62 0 68 0;
+#X connect 63 0 64 0;
+#X connect 64 0 68 0;
+#X connect 65 0 66 0;
+#X connect 66 0 68 0;
+#X connect 67 0 60 0;
+#X connect 67 1 59 0;
+#X connect 67 2 70 0;
+#X connect 67 3 65 1;
+#X connect 68 0 58 0;
+#X connect 68 1 69 0;
+#X connect 70 0 69 0;
+#X connect 71 0 67 0;
+#X connect 76 0 77 0;
+#X connect 78 0 79 0;
+#X connect 80 0 81 0;
+#X connect 82 0 83 0;
+#X restore 175 36 pd;
+#X connect 5 0 68 0;
+#X connect 6 0 11 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 9 0 18 0;
+#X connect 11 0 27 0;
+#X connect 11 0 41 0;
+#X connect 11 0 50 0;
+#X connect 11 0 7 0;
+#X connect 11 0 56 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 0;
+#X connect 13 0 15 0;
+#X connect 14 0 5 0;
+#X connect 15 0 17 0;
+#X connect 17 0 5 0;
+#X connect 18 0 12 1;
+#X connect 19 0 20 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 1;
+#X connect 22 0 24 0;
+#X connect 23 0 22 0;
+#X connect 23 0 25 0;
+#X connect 24 0 28 0;
+#X connect 25 0 26 0;
+#X connect 26 0 28 0;
+#X connect 27 0 19 0;
+#X connect 28 0 42 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 31 0 39 0;
+#X connect 33 0 38 0;
+#X connect 34 0 33 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 36 0 40 0;
+#X connect 38 0 40 0;
+#X connect 39 0 33 1;
+#X connect 40 0 37 0;
+#X connect 41 0 30 0;
+#X connect 42 0 29 0;
+#X connect 43 0 44 0;
+#X connect 44 0 45 0;
+#X connect 45 0 46 1;
+#X connect 46 0 53 0;
+#X connect 47 0 46 0;
+#X connect 47 0 48 0;
+#X connect 48 0 49 0;
+#X connect 49 0 51 0;
+#X connect 50 0 43 0;
+#X connect 51 0 55 0;
+#X connect 53 0 51 0;
+#X connect 54 0 13 0;
+#X connect 54 0 23 0;
+#X connect 54 0 34 0;
+#X connect 54 0 47 0;
+#X connect 54 0 61 0;
+#X connect 55 0 52 0;
+#X connect 56 0 57 0;
+#X connect 57 0 58 0;
+#X connect 58 0 59 0;
+#X connect 59 0 60 1;
+#X connect 60 0 62 0;
+#X connect 61 0 60 0;
+#X connect 61 0 63 0;
+#X connect 62 0 65 0;
+#X connect 63 0 64 0;
+#X connect 64 0 65 0;
+#X connect 65 0 66 0;
+#X connect 66 0 67 0;
+#X connect 68 0 16 0;
+#X connect 69 0 51 0;
+#X connect 69 0 40 0;
+#X connect 69 0 65 0;
+#X connect 69 0 28 0;
+#X connect 69 0 5 0;
+#X connect 70 0 69 0;
+#X connect 71 0 72 0;
+#X connect 72 0 49 0;
+#X connect 72 0 36 0;
+#X connect 72 0 64 0;
+#X connect 72 0 26 0;
+#X connect 72 0 17 0;

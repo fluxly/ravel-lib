@@ -1,0 +1,125 @@
+0 0 # --------------- STARTUP (event 19)-----------------;
+# --------------- EVENT 19, measure 266, beat 1, vln ----------------;
+rev-fb 85;
+
+pc-atten 0;
+pc-loc 40;
+pc-spread 0;
+pc-rev 90;
+
+pcfx-atten 0;
+pcfx-loc 40;
+pcfx-spread 0;
+pcfx-rev 0;
+
+vc-atten 0;
+vc-loc 45;
+vc-spread 0;
+vc-rev 90;
+
+vcfx-atten 0;
+vcfx-loc 45;
+vcfx-spread 5;
+vcfx-rev 0;
+
+vn-atten 0;
+vn-loc 50;
+vn-spread 0;
+vn-rev 90;
+
+vnfx-atten 0;
+vnfx-loc 45;
+vnfx-spread 5;
+vnfx-rev 0;
+
+fl-atten 93;
+fl-loc 30;
+fl-spread 0;
+fl-rev 90;
+
+flfx-atten 0;
+flfx-loc 40;
+flfx-spread 0;
+flfx-rev 90;
+
+bc-atten 0;
+bc-loc 36;
+bc-spread 0;
+bc-rev 90;
+
+bcfx-atten 0;
+bcfx-loc 36;
+bcfx-spread 0;
+bcfx-rev 90;
+
+fl-del1 333;
+fl-del2 456;
+fl-del3 510;
+fl-del4 687;
+
+fl-multitap-switch 1;
+
+fl-fback 50;
+fl-delatten 88 500;
+
+flfx-atten 0;
+flfx-rev 0;
+flfx-spread 10;
+flfx-loc 40;
+
+vn-pshift-switch 1;
+
+vn-atten 93;
+vn-loc 50 5;
+vn-spread 0 5;
+vn-rev 90;
+vnfx-atten 97;
+vnfx-loc 45;
+vnfx-spread 5;
+vnfx-rev 90;
+vn-shift1 15;
+vn-window1 53;
+vn-delay1 0;
+vn-shift2 -16;
+vn-window2 46;
+vn-delay2 0;
+
+0 1 # --------------- EVENT 20, measure 276, beat 1, vc -------------------;
+
+
+vc-pshift-switch 1;
+
+vc-atten 93;
+vc-loc 46 5;
+vc-spread 0 5;
+vc-rev 90;
+vcfx-atten 97;
+vcfx-loc 45;
+vcfx-spread 5;
+vcfx-rev 90;
+vc-shift1 24;
+vc-window1 89;
+vc-delay1 0;
+vc-shift2 -20;
+vc-window2 72;
+vc-delay2 0;
+
+0 2 # --------------- EVENT 21, measure 286, beat 1, b. cl. -----------------;
+
+pc-atten 100;
+
+bc-atten 100;
+
+0 3 # --------------- EVENT 22, measure 295, beat 1, vc octave divide ---------;
+
+vc-shift1 -1180;
+vc-shift2 -1220;
+
+vn-pshift-switch 0;
+
+0 4 # --------------- EVENT 23, measure 320, beat 1, pic. delays -------------;
+
+fl-delatten 90 500;
+
+0 5 # --------------- EVENT 24, measure 354, beat 1 -------------------;
+10 section-number 24;

@@ -1,0 +1,10 @@
+#N canvas 374 153 333 157 10;
+#X obj 84 54 r \$1;
+#X obj 79 100 s \$2;
+#X obj 119 97 s \$3;
+#X obj 160 100 s \$4;
+#X obj 194 100 s \$5;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 0 0 4 0;

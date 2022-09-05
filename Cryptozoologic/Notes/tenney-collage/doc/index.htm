@@ -1,0 +1,97 @@
+<HEAD>
+<TITLE>
+Computer Music Examples-James Tenney, Steve Reich
+</TITLE>
+</HEAD>
+<BODY bgcolor="#FFFFFF" link="#AA0000" vlink="#770000" marginwidth="0" marginheight="0" topmargin="0" bottommargin="0" leftmargin="0"><font face="Times">
+<H1> Computer Music Examples-James Tenney, Steve Reich </H1> 
+
+<p> This patch was inspired by James Tenney's Collage #1, but contains
+  a looping mechanism that can be used to riff on Steve
+Reich's Piano Phase.
+<p>
+<A NAME="tenney"><font face="Helvetica"><font size=+1>Tenney, <i>Collage #1</i></font></font><p>
+<P> In the qlist for the Tenney example, you get individual invocations of
+samples instead of loops, more appropriate for montage.  The example
+qlist has:
+
+<PRE>
+0 0 # --------------- STARTUP -----------------;
+0 1 # --------------- EVENT 1 -------------------;
+#      pitch amp duration file-number onset  risetime decaytime pan ;
+samp      60  90   1000        1        0        5        5       1;
+
+1000 samp 60 90 1000 1 0000 5 5 5;
+1000 samp 60 90 1000 1 1000 5 5 9;
+1000 samp 60 90 1000 1 1000 5 5 9;
+1000 samp 60 90 350 1 2000 100 100 5;
+100 samp 59 90 350 1 2000 100 100 5;
+100 samp 58 90 350 1 2000 100 100 5;
+100 samp 57 90 350 1 2000 100 100 5;
+100 samp 56 90 350 1 2000 100 100 5;
+100 samp 55 90 350 1 2000 100 100 5;
+100 samp 56 90 350 1 2000 100 100 5;
+100 samp 57 90 350 1 2000 100 100 5;
+100 samp 58 90 350 1 2000 100 100 5;
+100 samp 59 90 350 1 2000 100 100 5;
+100 samp 60 90 2000 1 2000 100 1000 5;
+1000 samp 58 90 5000 6 0 100 100 5;
+</PRE>
+
+<P> Note that the qlist doesn't contain commands to load soundfiles; this
+is done in the patch, but if you want to load your own they should be as in
+the Reich example below.
+
+<P> To do "live"
+recording from a qlist, it's easier to use the Manoury example, not this one.
+
+<p>
+<A NAME="playback"><font face="Helvetica"><font size=+1>Soundfile Playback</font></font><p>
+<p>
+When changing the speed of the soundfile, keep in mind some counter-intuitive facts about this sample reader:
+<p>
+The default, non-transposed speed of a file is "60." This is because this is MIDI for middle C. If you want to play your sample twice as fast, you mean to double its frequency. In terms of pitch, this means that you must transpose up an octave. Therefore, to double the soundfile playback speed, set the pitch at "72", or the MIDI pitch one octave above middle C. Likewise, to halve the speed, transpose down one octave to "48".
+<p>
+When playing a soundfile backwards,
+
+<p>
+<A NAME="Phasing"><font face="Helvetica"><font size=+1>Phasing ala Steve Reich, <i>Piano Phase</i></font></font><p>
+<p>
+In <i>Piano Phase</i>, two musically identical motives are looped at slightly different tempos. The result is that the repeated material slides out of phase. When the two join again, the piece ends. This sampling patch allows a files to play at specified rates, automatically looping the file. Each patch gets a bank of nine samples.  
+
+<p>Here is the "Reich" qlist:
+
+<PRE>
+0 0 comment --------------- STARTUP -----------------;
+sample1-read sample1.wav;
+0 1 comment --------------- EVENT 1 -------------------;
+start-loop1 1590 60 100 1580 1 2753 0 5;
+start-loop2 1580 60 100 1580 1 2753 0 5;
+0 2 comment --------------- EVENT 2 -------------------;
+stop-loop1 bang;
+stop-loop2 bang;
+</PRE>
+
+<P>  Here the first (startup) event  asks the first sample to read 
+"sample1.wav" into the first of the nine samples.  The second event
+starts the two loop players and the third stops them.  The loop players
+take arguments as commented on the patch; loop1, for example, gets:
+
+<PRE>
+	1590     periodicity of loop
+	60       pitch of sample
+	100      amplitude of sample
+        1580     length of each playback in msec (increase this for overlap)
+	1        sample number (agrees with "sample1-read" message in qlist)
+	2753     where in sample to start (0 for beginning) in msec
+	0        envelope rise time, msec
+        5        envelope release time, msec
+</PRE>
+
+
+
+
+
+
+
+</BODY>

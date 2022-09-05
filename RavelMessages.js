@@ -3,9 +3,16 @@ export const RavelMessages = {
 	subscriptions : {},
     
 	sendMessage:  function(msg, cmd, content) {
-        //
+        let evt = new CustomEvent(msg, { detail: { cmd: cmd, content: content }});
+        if (Object.keys(this.subscriptions).includes(msg)) {
+            for (let target of this.subscriptions[msg]) {
+                target.dispatchEvent(evt);
+                console.log(target);
+                console.log(msg);
+            }
+        }
     },
-
+    
 	subscribe: function(msg, target) {
         console.log('subscribing ' + msg + ' ' + this.subscriptions);
         if (Object.keys(this.subscriptions).includes(msg)) {

@@ -45,10 +45,10 @@ export default class RavelFluxum extends RavelElement {
     static get html() { 
         return `
         <div id="container" >
-        <div id="icon">😶</div>
+        <div id="icon">🐹</div>
         </div>
         <div id="bubble-container">
-        <div id="bubble">Hello World 🐵😑</div>
+        <div id="bubble">Hello World 😶🐵😑</div>
         </div>
         `;
     }

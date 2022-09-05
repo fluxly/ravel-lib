@@ -1,0 +1,8 @@
+print qlist 0;
+100 print qlist 100;;
+p1-note f0 0, cf 0, bw 0, s 29, p 21, t 103,
+ff 0, fd 0, ft 50, n 4, nf 0, nc 0, pc 0, vd 0, vf 0, rd 0,
+rf 0
+101 print qlist 101;
+200 print qlist 200;
+201 print qlist 201;

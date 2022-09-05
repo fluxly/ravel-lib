@@ -1,0 +1,21 @@
+#N canvas 75 316 673 331 10;
+#X obj 28 67 inlet~;
+#X text 26 9 args are receive names for:;
+#X obj 28 260 outlet~;
+#X obj 455 57 switch~;
+#X obj 57 172 pitchshift~ \$0-delay \$1 \$2 \$3 \$9-change;
+#X obj 136 201 pitchshift~ \$0-delay \$4 \$5 \$6 \$9-change;
+#X obj 57 127 delwrite-thru~ \$0-delay 2000;
+#X obj 455 33 switch-ctl \$9;
+#X obj 57 101 *~ 0.5;
+#X obj 57 227 spat2~ \$7 \$8 \$10 \$11;
+#X text 26 26 shift1 \, delay1 \, window1 \, shift2 \, delay2 \, window2
+\, loc \, spread \, switch \, level \, reverb send.;
+#X connect 0 0 2 0;
+#X connect 0 0 8 0;
+#X connect 4 0 9 0;
+#X connect 5 0 9 1;
+#X connect 6 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 3 0;
+#X connect 8 0 6 0;

@@ -1,0 +1,90 @@
+0 0 # --------------- STARTUP -----------------;
+# SECTION 2 (Event 7);
+
+# --------------- EVENT 7, measure 77, beat 1 -------------------;
+# turn off eff sends for 3 instrs and switch the effects off after delay ;
+rev-fb 85;
+
+pc-atten 100;
+pc-loc 40;
+pc-spread 0;
+pc-rev 90;
+
+pcfx-atten 0;
+pcfx-loc 40;
+pcfx-spread 0;
+pcfx-rev 0;
+
+vc-atten 100 500;
+vc-loc 45;
+vc-spread 0;
+vc-rev 90;
+
+vcfx-atten 0 500;
+vcfx-loc 45;
+vcfx-spread 7;
+vcfx-rev 0;
+
+vn-atten 100 500;
+vn-loc 50;
+vn-spread 0;
+vn-rev 90;
+
+vnfx-atten 0 500;
+vnfx-loc 50;
+vnfx-spread 7;
+vnfx-rev 0;
+
+fl-atten 93;
+fl-loc 30;
+fl-spread 0;
+fl-rev 90;
+
+flfx-atten 0;
+flfx-loc 40;
+flfx-spread 0;
+flfx-rev 90;
+
+bc-atten 100 500;
+bc-loc 36;
+bc-spread 0;
+bc-rev 90;
+
+bcfx-atten 0 500;
+bcfx-loc 36;
+bcfx-spread 0;
+bcfx-rev 90;
+
+fl-del1 333;
+fl-del2 456;
+fl-del3 510;
+fl-del4 687;
+fl-multitap-switch 1;
+fl-delatten 0;
+
+400 bc-flanger-switch 0;
+vn-pshift-switch 0;
+vc-pshift-switch 0;
+
+
+0 1 # --------------- EVENT 8, measure 96, beat 3.5 -------------------;
+
+fl-pshift-switch 1;
+flfx-atten 97;
+fl-atten 97;
+
+fl-shift1 -500;
+fl-window1 40;
+fl-delay1 0;
+
+fl-shift2 -700;
+fl-window2 40;
+fl-delay2 0;
+
+0 2 # --------------- EVENT 9, measure 122,  beat 1, harmonize pic ----------;
+
+fl-delatten 80 8000;
+
+0 3 # --------------- EVENT 10,  measure 131, beat 1 ------------------;
+
+10 section-number 10;

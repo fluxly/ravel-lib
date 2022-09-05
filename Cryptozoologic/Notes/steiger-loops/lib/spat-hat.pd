@@ -1,0 +1,16 @@
+#N canvas 437 331 554 340 12;
+#X obj 28 99 inlet;
+#X obj 28 129 - \$1;
+#X obj 28 244 outlet;
+#X floatatom 57 215 4 0 0;
+#X obj 28 155 expr 0.05 * ((($i1 + 840)%80) - 40);
+#X obj 28 183 expr max(1 - $f1 * $f1 \, 0);
+#X text 9 18 "hat" function for spatializer. If input is within 20
+of \$1 (considered mod 80) \, output from 0 to 1 depending on how close.
+If more than 20 away \, output zero.;
+#X text 14 75 location;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 5 0 2 0;

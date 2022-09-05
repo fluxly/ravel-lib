@@ -1,0 +1,15 @@
+0 0 # --------------- STARTUP -----------------;
+# THIS IS QLIST FOR TEST-TONE, NOT FOR THE PIECE; SEE qlist01.txt.;
+print TEST TONE...;
+fl-test 1;
+fl-atten 100;
+fl-loc 30;
+fl-spread 0;
+0 1 # --------------- EVENT 1 -------------------;
+fl-loc 50;
+0 2 # --------------- EVENT 2 -------------------;
+fl-loc 70;
+0 3 # --------------- EVENT 3 -------------------;
+fl-loc 10;
+0 4 # --------------- EVENT 4 -------------------;
+fl-atten 0;

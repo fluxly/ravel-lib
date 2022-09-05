@@ -1,0 +1,14 @@
+#N canvas 534 401 526 402 12;
+#X obj 96 224 soundfiler;
+#X obj 95 118 r \$1-read;
+#X obj 95 142 symbol;
+#X obj 95 55 table samplel\$1 441000;
+#X obj 272 54 table sampler\$1 441000;
+#X obj 95 167 pack s \$1;
+#X obj 210 163 print;
+#X msg 96 197 read -resize \$1 samplel\$2 sampler\$2;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 5 0 7 0;
+#X connect 5 0 6 0;
+#X connect 7 0 0 0;

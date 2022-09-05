@@ -1,0 +1,71 @@
+        this.containerX = this.container.getBoundingClientRect().left;
+        this.containerY = this.container.getBoundingClientRect().top;
+        this.handleX = this.handle.getBoundingClientRect().left;
+        this.handleY = this.handle.getBoundingClientRect().top;
+        this.handle2X = this.handle.getBoundingClientRect().left;
+        this.handle2Y = this.handle.getBoundingClientRect().top;
+        this.updateValues();
+        // bind changes signature, store the callback so we can later remove when dropped
+        this.mouseDownCallback = this.handleMouseDown.bind(this);
+        this.mouseMoveCallback = this.dragElement.bind(this); 
+        this.mouseUpCallback = this.endDragElement.bind(this); 
+        this.handle.addEventListener('mousedown', this.mouseDownCallback);
+        this.handle2.addEventListener('mousedown', this.mouseDownCallback);
+    }
+    handleMouseDown(e) {
+        e.preventDefault();
+        this.startX = e.clientX;
+        this.startY = e.clientY;
+        document.addEventListener('mousemove', this.mouseMoveCallback);
+        document.addEventListener('mouseup', this.mouseUpCallback);
+        document.addEventListener('mouseleave', this.mouseUpCallback);
+    }
+    
+    dragElement(e) {
+        e.preventDefault();
+        let x = this.startX - e.clientX;
+        let y = this.startY - e.clientY;
+        let draggedHandle = e.target;
+        this.startX = e.clientX;
+        this.startY = e.clientY;
+        this.handleX = this.handle.getBoundingClientRect().left;
+        this.handleY = this.handle.getBoundingClientRect().top;
+        if (this.orientation === 'horizontal') {
+            if (x > 0) {
+                // moving left
+                if ((this.handleX - x) > (this.containerX + this.padding)) {
+                    this.handle.style.left = (this.handle.offsetLeft - x) + 'px';
+                    this.updateValues();
+                } 
+            }
+            if (x < 0) {
+                // moving right
+                if (((this.handleX - x) < (this.containerX + this.length + this.padding - this.size))) {
+                    this.handle.style.left = (this.handle.offsetLeft - x) + 'px';
+                    this.updateValues();
+                } 
+            }
+        } else {
+            if (y > 0) {
+                // moving down
+                if ((this.handleY - y) > (this.containerY + this.padding)) {
+                    this.handle.style.top = (this.handle.offsetTop - y) + 'px';
+                    this.updateValues();
+                } 
+            }
+            if (y < 0) {
+                // moving up
+                if (((this.handleY - y) < (this.containerY + this.length + this.padding - this.size))) {
+                    this.handle.style.top = (this.handle.offsetTop - y) + 'px';
+                    this.updateValues();
+                } 
+            }
+        }
+     }
+
+    endDragElement() {
+        document.removeEventListener('mousemove', this.mouseMoveCallback);
+        document.removeEventListener('mouseup', this.mouseUpCallback);
+        document.removeEventListener('mouseout', this.mouseUpCallback);
+        document.removeEventListener('mouseleave', this.mouseUpCallback);
+    }

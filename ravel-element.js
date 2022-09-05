@@ -7,6 +7,7 @@ export class RavelElement extends HTMLElement {
 	}
 	
 	sendMessage(msg, cmd, content) {
+        //console.log('RavelMessages.sendMessage');
 		RavelMessages.sendMessage(msg, cmd, content);
 	}
 

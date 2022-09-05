@@ -54,11 +54,11 @@ export default class RavelSwitch extends RavelElement {
         this.state = 0;
         this.stateDir = 1;
         this.stateIcons = [ '⛔️', '🟢' ];
-        this.stateSignals = [ `switch-${this.switchId}-off`, `switch-${this.switchId}-on` ];
+        this.stateSignals = [ `off`, `on` ];
     }
   
     setup() {
-        this.observedMessages = ['toggle'];
+        this.observedMessages = [`switch-${this.switchId}`];
         this.subscribe(this.observedMessages);
         this.container.style['font-size'] = `${this.size}px`;
         if (this.stateIcons.length !== this.states.length) {
@@ -69,6 +69,7 @@ export default class RavelSwitch extends RavelElement {
             }
         }
         if (this.orientation === 'horizontal') {
+            this.container.style['width'] = `${this.size * this.states}px`;
             this.container.style['border-bottom'] = '3px dotted #aaaaaa';
             console.log(`${this.size / 2}px`);
             this.container.style['height'] = `${this.size / 2}px`;
@@ -99,7 +100,12 @@ export default class RavelSwitch extends RavelElement {
         }
         this.state =  this.state + this.stateDir;
         this.shadowRoot.querySelector(`#state-${this.state}`).style.visibility = 'visible'; 
-        this.sendMessage(this.stateSignals[this.state]);
+        console.log("toggle " + this.stateSignals[this.state]);
+        //this.sendMessage(this.stateSignals[this.state], '', '');
+        let evt = new CustomEvent(this.stateSignals[this.state], { detail: {}});
+        console.log(evt);
+        console.log(this.stateSignals[this.state]);
+        this.dispatchEvent(evt);
     }
     
     teardown() {

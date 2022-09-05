@@ -8,15 +8,59 @@ export default class RavelSlider extends RavelElement {
         return `
         <style>
         #slider-container {
-            display:inline-block;
-            cursor:pointer;
+          width: 100%; 
         }
-        #slider-handle-1, #slider-handle-2 {
-            position: absolute;
-        }
-        #slider-handle-2 {
-            display:none;
-            float:right;
+
+        /* The slider itself */
+        .slider-1, .slider-2 {
+              -webkit-appearance: none;  /* Override default CSS styles */
+              appearance: none;
+              width: 100%; /* Full-width */
+              height: 0px; /* Specified height */
+              background: #000000; /* Grey background */
+              border-bottom:3px dotted #aaaaaa;
+              outline: none; /* Remove outline */
+              pointer-events: none;
+          }
+          .slider-2 {
+              display:none;
+          }
+          .slider-1::-webkit-slider-thumb {
+              pointer-events: auto;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 40px;
+            height: 40px;
+            border: 0;
+            background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgd2lkdGg9IjQwIgogICBoZWlnaHQ9IjQwIgogICB2aWV3Qm94PSIwIDAgNDAgNDAiCiAgIGZpbGw9Im5vbmUiCiAgIHZlcnNpb249IjEuMSIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzCiAgICAgaWQ9ImRlZnM4NDM2IiAvPgogCiAgPHRleHQKICAgICB4bWw6c3BhY2U9InByZXNlcnZlIgogICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjI0cHg7bGluZS1oZWlnaHQ6MS4yNTtmb250LWZhbWlseTpzYW5zLXNlcmlmO2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZSIKICAgICB4PSIwIgogICAgIHk9IjAiCiAgICAgaWQ9InRleHQ5NjQ2Ij48dHNwYW4KICAgICAgIHNvZGlwb2RpOnJvbGU9ImxpbmUiCiAgICAgICBpZD0idHNwYW45NjQ0IgogICAgICAgeD0iMCIKICAgICAgIHk9IjM2IgogICAgICAgc3R5bGU9ImZvbnQtc2l6ZTozNnB4Ij7wn6ShPC90c3Bhbj48L3RleHQ+Cjwvc3ZnPgo='); 
+            cursor: pointer;
+          }
+          .slider-1::-moz-range-thumb {
+              pointer-events: auto;
+            width: 40px;
+            height: 40px;
+            border: 0;
+            background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgd2lkdGg9IjQwIgogICBoZWlnaHQ9IjQwIgogICB2aWV3Qm94PSIwIDAgNDAgNDAiCiAgIGZpbGw9Im5vbmUiCiAgIHZlcnNpb249IjEuMSIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzCiAgICAgaWQ9ImRlZnM4NDM2IiAvPgogCiAgPHRleHQKICAgICB4bWw6c3BhY2U9InByZXNlcnZlIgogICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjI0cHg7bGluZS1oZWlnaHQ6MS4yNTtmb250LWZhbWlseTpzYW5zLXNlcmlmO2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZSIKICAgICB4PSIwIgogICAgIHk9IjAiCiAgICAgaWQ9InRleHQ5NjQ2Ij48dHNwYW4KICAgICAgIHNvZGlwb2RpOnJvbGU9ImxpbmUiCiAgICAgICBpZD0idHNwYW45NjQ0IgogICAgICAgeD0iMCIKICAgICAgIHk9IjM2IgogICAgICAgc3R5bGU9ImZvbnQtc2l6ZTozNnB4Ij7wn6ShPC90c3Bhbj48L3RleHQ+Cjwvc3ZnPgo='); 
+            cursor: pointer;
+          }
+          .slider-2::-webkit-slider-thumb {
+              pointer-events: auto;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 40px;
+            height: 40px;
+            border: 0;
+            background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgd2lkdGg9IjQwIgogICBoZWlnaHQ9IjQwIgogICB2aWV3Qm94PSIwIDAgNDAgNDAiCiAgIGZpbGw9Im5vbmUiCiAgIHZlcnNpb249IjEuMSIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzCiAgICAgaWQ9ImRlZnM4NDM2IiAvPgogCiAgPHRleHQKICAgICB4bWw6c3BhY2U9InByZXNlcnZlIgogICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjI0cHg7bGluZS1oZWlnaHQ6MS4yNTtmb250LWZhbWlseTpzYW5zLXNlcmlmO2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZSIKICAgICB4PSIwIgogICAgIHk9IjAiCiAgICAgaWQ9InRleHQ5NjQ2Ij48dHNwYW4KICAgICAgIHNvZGlwb2RpOnJvbGU9ImxpbmUiCiAgICAgICBpZD0idHNwYW45NjQ0IgogICAgICAgeD0iMCIKICAgICAgIHk9IjM2IgogICAgICAgc3R5bGU9ImZvbnQtc2l6ZTozNnB4Ij7wn6SWPC90c3Bhbj48L3RleHQ+Cjwvc3ZnPgo='); 
+            cursor: pointer;
+          }
+          .slider-2::-moz-range-thumb {
+              pointer-events: auto;
+            width: 40px;
+            height: 40px;
+            border: 0;
+            background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgd2lkdGg9IjQwIgogICBoZWlnaHQ9IjQwIgogICB2aWV3Qm94PSIwIDAgNDAgNDAiCiAgIGZpbGw9Im5vbmUiCiAgIHZlcnNpb249IjEuMSIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzCiAgICAgaWQ9ImRlZnM4NDM2IiAvPgogCiAgPHRleHQKICAgICB4bWw6c3BhY2U9InByZXNlcnZlIgogICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjI0cHg7bGluZS1oZWlnaHQ6MS4yNTtmb250LWZhbWlseTpzYW5zLXNlcmlmO2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZSIKICAgICB4PSIwIgogICAgIHk9IjAiCiAgICAgaWQ9InRleHQ5NjQ2Ij48dHNwYW4KICAgICAgIHNvZGlwb2RpOnJvbGU9ImxpbmUiCiAgICAgICBpZD0idHNwYW45NjQ0IgogICAgICAgeD0iMCIKICAgICAgIHk9IjM2IgogICAgICAgc3R5bGU9ImZvbnQtc2l6ZTozNnB4Ij7wn6SWPC90c3Bhbj48L3RleHQ+Cjwvc3ZnPgo='); 
+            cursor: pointer;
+          }
         }
         </style>
         `;
@@ -24,22 +68,21 @@ export default class RavelSlider extends RavelElement {
   
     static get html() { 
         return `
-        <div id="slider-container">
-        <div id="slider-handle-2" draggable="true"></div>
-        <div id="slider-handle-1" draggable="true"></div>
-        </div>
+    <div id="slider-container">
+        <input type="range" min=0 max=1 step=.01 value="0" class="slider-1" id="handle-1">
+        <input type="range" min=0 max=1 step=.01 value="1" class="slider-2" id="handle-2">
+    </div>
         `;
     }
  
     static get observedAttributes() { 
-       return ['slider-id', 'sliders', 'length', 'size', 'x', 'y', 'orientation', 'value', 'icon', 'signals'];
+       return ['slider-id', 'sliders', 'min', 'max', 'size', 'orientation', 'value', 'value-2', 'icon', 'signals'];
     }
 
     constructor() {
         super();
         const template = document.createElement('template');
-        template.innerHTML = globalStyles
-            + this.constructor.localStyles
+        template.innerHTML =  this.constructor.localStyles
             + this.constructor.html;
         this.attachShadow({ mode: 'open' });
         this.shadowRoot.appendChild(template.content.cloneNode(true));
@@ -56,142 +99,87 @@ export default class RavelSlider extends RavelElement {
     
     initialize() {
         this.container = this.shadowRoot.querySelector('#slider-container');
-        this.handle = this.shadowRoot.querySelector('#slider-handle-1');
-        this.handle2 = this.shadowRoot.querySelector('#slider-handle-2');
+        this.handle = this.shadowRoot.querySelector('#handle-1');
+        this.handle2 = this.shadowRoot.querySelector('#handle-2');
+        this.handle2.style['border-bottom'] = 'none';
+        this.handle2.style['margin-top'] = '-4px';
+       
         this.sliderId = 0;
-        this.length = 300;
-        this.size = 24;
+        this.size = 32;
         this.orientation = 'horizontal';
-        this.value = 0.5;
+        this.value = 0;
+        this.value2 = 1.0;
         this.sliders = 1;
-        this.stateSignals = `slider-${this.sliderId}`;
+        this.min = 0;
+        this.max = 1.0;
+        this.step = 0.01;
     }
   
     setup() {
         this.observedMessages = ['message'];
         this.container.style['font-size'] = `${this.size}px`;
-        this.padding = this.size / 5;
-        let bottomPadding = this.padding * 1.5;
-        
+        this.handle.value = this.value;
+        this.handle2.value = this.value2;
         if (this.orientation === 'horizontal') {
-            this.container.style['width'] = `${this.length}px`;
-            this.container.style['height'] = `${this.size / 2 + 4 }px`;
-            this.container.style['margin-bottom'] = `${this.size / 2 }px`;
-            this.container.style['border-bottom'] = `3px dotted #aaaaaa`;
-            this.handle2.style.left = `${this.length - this.size}px`;
-        } else {
-            this.container.style['width'] = `${this.size / 2}px`;
-            this.container.style['height'] = `${this.length}px`;
-            this.container.style['border-right'] = `3px dotted #aaaaaa`;
-            this.container.style['margin-right'] = `${this.size / 2 }px`;
-            this.handle2.style.top = `${this.length - this.size}px`;
-        }
-        if (this.sliders === 2) this.handle2.style.display = 'block';
-        // TODO: set the position of the handle for passed in attributes
-        let icon = RavelEmoji.getRandomEmoji()
-        console.log(icon);
-        this.handle.textContent = icon;
-        this.handle2.textContent = icon;
-        this.containerX = this.container.getBoundingClientRect().left;
-        this.containerY = this.container.getBoundingClientRect().top;
-        this.handleX = this.handle.getBoundingClientRect().left;
-        this.handleY = this.handle.getBoundingClientRect().top;
-        this.handle2X = this.handle.getBoundingClientRect().left;
-        this.handle2Y = this.handle.getBoundingClientRect().top;
-        this.updateValues();
-        // bind changes signature, store the callback so we can later remove when dropped
-        this.mouseDownCallback = this.handleMouseDown.bind(this);
-        this.mouseMoveCallback = this.dragElement.bind(this); 
-        this.mouseUpCallback = this.endDragElement.bind(this); 
-        this.handle.addEventListener('mousedown', this.mouseDownCallback);
-        this.handle2.addEventListener('mousedown', this.mouseDownCallback);
-    }
-    handleMouseDown(e) {
-        e.preventDefault();
-        this.startX = e.clientX;
-        this.startY = e.clientY;
-        document.addEventListener('mousemove', this.mouseMoveCallback);
-        document.addEventListener('mouseup', this.mouseUpCallback);
-        document.addEventListener('mouseleave', this.mouseUpCallback);
-    }
+           this.container.style['height'] = `${this.size}px`;
+           this.container.style['margin-top'] = `${this.size}px`
     
-    dragElement(e) {
-        e.preventDefault();
-        let x = this.startX - e.clientX;
-        let y = this.startY - e.clientY;
-        let draggedHandle = e.target;
-        this.startX = e.clientX;
-        this.startY = e.clientY;
-        this.handleX = this.handle.getBoundingClientRect().left;
-        this.handleY = this.handle.getBoundingClientRect().top;
-        if (this.orientation === 'horizontal') {
-            if (x > 0) {
-                // moving left
-                if ((this.handleX - x) > (this.containerX + this.padding)) {
-                    this.handle.style.left = (this.handle.offsetLeft - x) + 'px';
-                    this.updateValues();
-                } 
-            }
-            if (x < 0) {
-                // moving right
-                if (((this.handleX - x) < (this.containerX + this.length + this.padding - this.size))) {
-                    this.handle.style.left = (this.handle.offsetLeft - x) + 'px';
-                    this.updateValues();
-                } 
-            }
         } else {
-            if (y > 0) {
-                // moving down
-                if ((this.handleY - y) > (this.containerY + this.padding)) {
-                    this.handle.style.top = (this.handle.offsetTop - y) + 'px';
-                    this.updateValues();
-                } 
-            }
-            if (y < 0) {
-                // moving up
-                if (((this.handleY - y) < (this.containerY + this.length + this.padding - this.size))) {
-                    this.handle.style.top = (this.handle.offsetTop - y) + 'px';
-                    this.updateValues();
-                } 
-            }
+           this.container.style['width'] = `${this.size}px`;
+           this.container.style['margin-left'] = `${this.size}px`
+        
         }
-     }
-
-    endDragElement() {
-        document.removeEventListener('mousemove', this.mouseMoveCallback);
-        document.removeEventListener('mouseup', this.mouseUpCallback);
-        document.removeEventListener('mouseout', this.mouseUpCallback);
-        document.removeEventListener('mouseleave', this.mouseUpCallback);
-    }
-     
-    updateValues() {
-        if (this.orientation === 'horizontal') {
-            this.value = (this.handleX - (this.containerX + this.padding * 2)) / this.length;
-        } else {
-            this.value = ((this.containerY + this.padding * 2) - this.handleY) / this.length;
+        if (this.sliders === 2) {
+            this.handle2.style.display = 'block';
         }
-        //console.log(this.value);
+        this.stateSignals = `slider-${this.sliderId}`;
+        this.handle.min = this.min;
+        this.handle.max = this.handle2.value;
+        this.handle.step = this.step;
+        this.handle2.min = this.handle.value;
+        this.handle.max = this.max;
+        this.handle2.step = this.step;
+        
+        this.handle.addEventListener('input', () => {
+            console.log(`1 ${this.handle.value} 2 ${this.handle2.value}`);
+            if (this.handle.value >= this.handle2.value) {
+                console.log(">>>>");
+                this.handle2.value = this.handle.value;
+            }
+            console.log(`1 ${this.handle.value} 2 ${this.handle2.value}`);
+            let evt = new CustomEvent('slider-change', { detail: { value1: this.value }});
+            this.dispatchEvent(evt);
+        });
+        
+        this.handle2.addEventListener('input', () => {
+            console.log(`1 ${this.handle.value} 2 ${this.handle2.value}`);
+            if (this.handle2.value <= this.handle.value) {
+                 console.log("<<<<<");
+                this.handle.value = this.handle2.value;
+            }
+            
+            let evt = new CustomEvent('slider-2-change', { detail: { value1: this.value2 }});
+            this.dispatchEvent(evt);
+        });
+        
+        /* TODO: Get encoding of emoji working 
+        this.icon1 = `url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgd2lkdGg9IjQwIgogICBoZWlnaHQ9IjQwIgogICB2aWV3Qm94PSIwIDAgNDAgNDAiCiAgIGZpbGw9Im5vbmUiCiAgIHZlcnNpb249IjEuMSIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzCiAgICAgaWQ9ImRlZnM4NDM2IiAvPgogCiAgPHRleHQKICAgICB4bWw6c3BhY2U9InByZXNlcnZlIgogICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjI0cHg7bGluZS1oZWlnaHQ6MS4yNTtmb250LWZhbWlseTpzYW5zLXNlcmlmO2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZSIKICAgICB4PSIwIgogICAgIHk9IjAiCiAgICAgaWQ9InRleHQ5NjQ2Ij48dHNwYW4KICAgICAgIHNvZGlwb2RpOnJvbGU9ImxpbmUiCiAgICAgICBpZD0idHNwYW45NjQ0IgogICAgICAgeD0iMCIKICAgICAgIHk9IjM2IgogICAgICAgc3R5bGU9ImZvbnQtc2l6ZTozNnB4Ij7wn42pPC90c3Bhbj48L3RleHQ+Cjwvc3ZnPgo=')`;
+        this.shadowRoot.styleSheets[0].insertRule(`.slider-1::-webkit-slider-thumb { background: ${this.icon1}; }`, 0);
+        this.shadowRoot.styleSheets[0].insertRule(`.slider-1::-moz-range-thumb { background: ${this.icon1}; }`, 0);
+       
+       // this.icon2 = this.getEncodedIcon(RavelEmoji.getRandomEmoji());
+        console.log(this.icon1);
+        */
     }
     
     teardown() {
        // this.unsubscribe(this.observedMessages);
-       this.handle.removeEventListener('mousedown', this.mouseDownCallback);
-       this.handle2.removeEventListener('mousedown', this.mouseDownCallback);
+
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
         if (name.includes('size')) {
             this.size = Number(newValue);
-        }
-        if (name === 'x') {
-            this.container.style.position = 'fixed';
-            this.x = newValue;
-            this.container.style.left = newValue;
-        }
-        if (name === 'y') {
-            this.container.style.position = 'fixed';
-            this.y = newValue;
-            this.container.style.top = newValue;
         }
         if (name === 'orientation') {
             this.orientation = newValue;
@@ -202,15 +190,55 @@ export default class RavelSlider extends RavelElement {
         if (name === 'sliders') {
             this.sliders = parseInt(newValue, 10);
         }
-        if (name === 'length') {
-            this.length = Number(newValue);
+        if (name === 'min') {
+            this.min = Number(newValue);
+        }
+        if (name === 'max') {
+            this.max = Number(newValue);
+        }
+        if (name === 'step') {
+            this.step = Number(newValue);
         }
         if (name === 'value') {
             this.value = Number(newValue);
         }
+        if (name === 'value-2') {
+            this.value2 = Number(newValue);
+        }
         if (name === 'signals') {
             this.signal = newValue.split(',');
         }
+    }
+    
+    getEncodedIcon(emoji) {
+        let svg = `
+         <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+         <svg
+            width="${this.size + 8}"
+            height="${this.size + 8}"
+            viewBox="0 0 ${this.size + 8} ${this.size + 8}"
+            fill="none"
+            version="1.1"
+            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:svg="http://www.w3.org/2000/svg">
+           <defs
+              id="defs8436" />
+ 
+           <text
+              xml:space="preserve"
+              style="font-style:normal;font-weight:normal;font-size:24px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+              x="0"
+              y="0"
+              id="text9646"><tspan
+                sodipodi:role="line"
+                id="tspan9644"
+                x="0"
+                y="${this.size}"
+                style="font-size:${this.size}px">${emoji}</tspan></text>
+         </svg>
+        `;
+        return svg;
     }
 }
 

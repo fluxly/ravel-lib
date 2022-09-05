@@ -10,7 +10,10 @@
             user-select: none; 
             -webkit-tap-highlight-color: rgba(0,0,0,0);
             background-color:#000000;
-		}
+        }
+    input::-webkit-range-progress { background-color:#ff0000; }
+    input::-moz-range-progress { background-color:#ff0000; }
+    input::-ms-fill-lower { background-color:#ff0000; }
 	</style>
 	<script type="module">
 		import "../ravel-slider.js";
@@ -18,10 +21,23 @@
 </head>
 <body>
 <div id="page-wrapper">
-	<ravel-slider size="50" length="500"></ravel-slider>
-    <ravel-slider size="30" length="300" x="50%" y="50%"></ravel-slider>
-    <ravel-slider size="40" orientation="vertical" length="600" x="20%" y="100px"></ravel-slider>
+	<ravel-slider id="slider-0" sliders=2 size="50"></ravel-slider>
+    <ravel-slider id="slider-1" sliders=2 size="50"></ravel-slider>
+    <ravel-slider id="slider-2" size="50"></ravel-slider>
+    <input type="range" min=0 max=1 step=.01 value="0" class="slider-1" id="handle-1">
 </div>
+
 </body>
+<script>
+    document.querySelector('#slider-0').addEventListener('slider-change', (evt) => {
+        console.log(evt.detail.value1); 
+    });
+    document.querySelector('#slider-1').addEventListener('slider-change', (evt) => {
+        console.log(evt.detail.value1); 
+    });
+    document.querySelector('#slider-2').addEventListener('slider-change', (evt) => {
+        console.log(evt.detail.value1); 
+    });
+</script>
 </html>
 

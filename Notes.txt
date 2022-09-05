@@ -1,7 +1,7 @@
 NOTES
 
 * Cryptozoologic: A daily puzzling sound snack
-* Daily == new scene based on day of the month, same each month
+* Daily == new scene based on day of the week, expand to month
 
 Ravel-lib:
 

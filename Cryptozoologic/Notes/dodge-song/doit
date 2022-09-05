@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if test $BASEDIR 
+then
+    echo -n
+else
+    BASEDIR=.
+fi
+
+echo ${PD:-pd} ${PDHIGHLATENCY:-} \
+    -path ${BASEDIR:-.} -path ${BASEDIR:-.}/lib -path ${BASEDIR:-.}/../lib \
+    -path ${BASEDIR:-.}/../../lib \
+    -path ${BASEDIR:-.}/tab -path ${BASEDIR:-.}/score \
+    $* main.pd
+
+${PD:-pd} ${PDHIGHLATENCY:-} \
+    -path ${BASEDIR:-.} -path ${BASEDIR:-.}/lib -path ${BASEDIR:-.}/../lib \
+    -path ${BASEDIR:-.}/../../lib \
+    -path ${BASEDIR:-.}/tab -path ${BASEDIR:-.}/score \
+    $* main.pd

@@ -27,6 +27,12 @@ export default class RavelProgressiveComposition extends RavelElement {
             margin-left:30px;
             font-size:24px;
         }
+        #slider-container {
+            position: absolute;
+            bottom: 50px;
+            left: 20px;
+            width: 300px;
+        }
         @-webkit-keyframes pulse {
           to {
             -webkit-transform: scale(1.1);
@@ -91,13 +97,15 @@ export default class RavelProgressiveComposition extends RavelElement {
     static get html() { 
         return `
         <div id="container">
-         <div id="composition-grid">
-         </div>
-         <ravel-slider size="20" color="red" length="300" y="90%"></ravel-slider>
-         <div id="auto-play">
-        <div id="auto-play-indicator">⚫️</div>
-        🐐
-        </div>
+            <div id="composition-grid">
+            </div>
+            <div id="slider-container">
+            <ravel-slider size="20"></ravel-slider>
+            </div>
+            <div id="auto-play">
+           <div id="auto-play-indicator">⚫️</div>
+           🐐
+           </div>
         </div>
         `;
     }

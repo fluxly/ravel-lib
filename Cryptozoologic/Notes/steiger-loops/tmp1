@@ -1,0 +1,9 @@
+#! /bin/bash
+echo ${PD:-pd}
+
+${PD:-pd} ${PDSETTINGS:-} \
+    -path ${BASEDIR:-.} \
+    -path ${BASEDIR:-.}/lib \
+    -path ${BASEDIR:-.}/../../lib \
+    -path ${BASEDIR:-.}/../../sound/loops \
+    $* ${BASEDIR:-.}/loops.pd

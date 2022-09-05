@@ -1,0 +1,18 @@
+#N canvas 37 450 464 392 10;
+#X obj 52 39 fork4 \$1-a \$2-a \$3-a \$4-a \$5-a;
+#X obj 52 62 fork4 \$1-f \$2-f \$3-f \$4-f \$5-f;
+#X obj 52 84 fork4 \$1-f0 \$2-f0 \$3-f0 \$4-f0 \$5-f0;
+#X obj 52 106 fork4 \$1-cf \$2-cf \$3-cf \$4-cf \$5-cf;
+#X obj 52 128 fork4 \$1-bw \$2-bw \$3-bw \$4-bw \$5-bw;
+#X obj 52 150 fork4 \$1-s \$2-s \$3-s \$4-s \$5-s;
+#X obj 52 172 fork4 \$1-p \$2-p \$3-p \$4-p \$5-p;
+#X obj 52 194 fork4 \$1-t \$2-t \$3-t \$4-t \$5-t;
+#X obj 52 216 fork4 \$1-ff \$2-ff \$3-ff \$4-ff \$5-ff;
+#X obj 52 238 fork4 \$1-fd \$2-fd \$3-fd \$4-fd \$5-fd;
+#X obj 52 260 fork4 \$1-ft \$2-ft \$3-ft \$4-ft \$5-ft;
+#X obj 52 282 fork4 \$1-n \$2-n \$3-n \$4-n \$5-n;
+#X obj 52 304 fork4 \$1-nf \$2-nf \$3-nf \$4-nf \$5-nf;
+#X obj 52 326 fork4 \$1-nc \$2-nc \$3-nc \$4-nc \$5-nc;
+#X obj 52 348 fork4 \$1-pc \$2-pc \$3-pc \$4-pc \$5-pc;
+#X obj 52 370 fork4 \$1-attack \$2-attack \$3-attack \$4-attack \$5-attack
+;

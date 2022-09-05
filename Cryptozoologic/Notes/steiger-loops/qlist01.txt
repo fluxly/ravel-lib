@@ -1,0 +1,102 @@
+0 0 # --------------- EVENT 0 (startup) -----------------;
+# SECTION 1;
+pitch-track-on 0;
+
+0 1 # --------------- EVENT 1, measure 1, beat 1 -------------------;
+fl-atten 95;
+fl-rev 90;
+fl-spread 20;
+fl-loc 30;
+
+fl-del1 333;
+fl-del2 456;
+fl-del3 510;
+fl-del4 687;
+fl-fback 50;
+fl-delatten 95;
+
+flfx-atten 0;
+flfx-rev 90;
+flfx-spread 30;
+flfx-loc 40;
+
+fl-multitap-switch 1;
+rev-fb 85;
+
+0 2 # --------------- EVENT 2, measure 26, beat 1 -------------------;
+
+fl-spread 0 2000;
+flfx-spread 10;
+fl-delatten 88 2000;
+
+vn-pshift-switch 1;
+
+vn-atten 93;
+vn-loc 50 5;
+vn-spread 0 5;
+vn-rev 90;
+vnfx-atten 97;
+vnfx-loc 50 5;
+vnfx-spread 7 5;
+vnfx-rev 90;
+vn-shift1 15;
+vn-window1 53;
+vn-delay1 0;
+vn-shift2 -16;
+vn-window2 46;
+vn-delay2 0;
+
+
+0 3 # --------------- EVENT 3, measure 26, beat 2, before violin entrance ----;
+
+bc-flanger-switch 1;
+
+bc-atten 93;
+bc-loc 36 5;
+bc-spread 0 5;
+bc-rev 90;
+bcfx-atten 93;
+bcfx-loc 36 5;
+bcfx-spread 0 5;
+bcfx-rev 90;
+bc-fdel 20;
+bc-fback 81;
+bc-fspeed 7;
+bc-del1 0;
+bc-fback 81;
+
+0 4 # --------------- EVENT 4, measure 37, beat 1, b.cl. entrance  ---------;
+
+vc-pshift-switch 1;
+
+vc-atten 93;
+vc-loc 46 5;
+vc-spread 0 5;
+vc-rev 90;
+vcfx-atten 97;
+vcfx-loc 45 5;
+vcfx-spread 7 5;
+vcfx-rev 90;
+vc-shift1 24;
+vc-window1 89;
+vc-delay1 0;
+vc-shift2 -20;
+vc-window2 72;
+vc-delay2 0;
+
+0 5 # --------------- EVENT 5, measure 47, beat 1, vc entrance  ---------;
+
+pc-atten 100;
+pc-loc 40 5;
+pc-spread 0 5;
+pc-rev 90;
+
+
+0 6 # --------------- EVENT 6, measure 57, beat 1, mrb. entrance ---------;
+
+flfx-atten 0 500;
+fl-atten 100 500;
+fl-multitap-switch 0;
+
+0 7 # --------------- EVENT 7, measure 77, beat 1 -------------------;
+10 section-number 7;

@@ -1,0 +1,108 @@
+0 0 # --------------- STARTUP -----------------;
+# SECTION 3 (Event 10)  measure 131, beat 1 ;
+
+flfx-atten 0;
+fl-delatten 0;
+
+rev-fb 85;
+
+pc-atten 100;
+pc-loc 40;
+pc-spread 0;
+pc-rev 90;
+
+pcfx-atten 0;
+pcfx-loc 40;
+pcfx-spread 0;
+pcfx-rev 0;
+
+vc-atten 100;
+vc-loc 45;
+vc-spread 0;
+vc-rev 90;
+
+vcfx-atten 0;
+vcfx-loc 45;
+vcfx-spread 0;
+vcfx-rev 90;
+
+vn-atten 100;
+vn-loc 50;
+vn-spread 0;
+vn-rev 90;
+
+vnfx-atten 0;
+vnfx-loc 50;
+vnfx-spread 0;
+vnfx-rev 0;
+
+fl-atten 93;
+fl-loc 30;
+fl-spread 0;
+fl-rev 90;
+
+flfx-atten 0;
+flfx-loc 40;
+flfx-spread 0;
+flfx-rev 90;
+
+bc-atten 100;
+bc-loc 36;
+bc-spread 0;
+bc-rev 90;
+
+bcfx-atten 0;
+bcfx-loc 36;
+bcfx-spread 0;
+bcfx-rev 90;
+
+fl-delatten 0;
+
+fl-pshift-switch 0;
+
+1000 fl-multitap-switch 0;
+
+0 1 # --------------- EVENT 11, measure 137, beat 1,harmonizing off  ------;
+
+fl-del1 333;
+fl-del2 456;
+fl-del3 510;
+fl-del4 687;
+fl-multitap-switch 1;
+
+fl-atten 95;
+fl-rev 90;
+fl-spread 0;
+fl-loc 40;
+
+fl-fback 50;
+fl-delatten 95;
+
+flfx-atten 0;
+flfx-rev 90;
+flfx-spread 30;
+flfx-loc 30;
+
+2000 
+bc-atten 0;
+pc-atten 0;
+vn-atten 0;
+vc-atten 0;
+
+bcfx-atten 0;
+pcfx-atten 0;
+vnfx-atten 0;
+vcfx-atten 0;
+
+0 2 # ------- EVENT 12, measure 145, beat 1, flute cadenza, all else off ----;
+
+fl-motorboat 500;
+
+0 3 # --------------- EVENT 13, measure 147, beat 1 -------------------;
+
+fl-motorboat 250;
+
+0 4 # --------------- EVENT 14. measure 150, beat 1 -------------------;
+
+10 section-number 14;
+

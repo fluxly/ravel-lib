@@ -2,16 +2,28 @@ Size: 1500 x 1000
 Can be landscape or portrait
 All emojis. In general no text or numbers (Shempscape ok)
 
+
+Just Seven:
+1. Nessie Bytebeat Shufflebox
+2. Irish Yeti
+3. In C -> Last Alley Maze
+4. Pukwudgie with four samples
+5. Feral Vocaloid
+6. Rhythmicon Fluxly with limited palette or Ozard granular
+7. Fluxly 
+
+
+
 (need 12)
 31 Days:
-Nessie : Granular
+Nessie : Simple synths
 Pukwudgie : Samples in Eno loops
 Shempscape : Bytebeat shufflebox
 Mothman : Progressive Composition 1 6 slots 6 players
 Irish Yeti : Euclydian polyrhythm
-Ozark Howler : three drawn waveforms modulate each other
-Bessie : plays samples on attack like Kate Bush bird piece
-Tessie: feral vocaloid
+Ozark Howler : Field recorder, select or record three sounds, play forward backward, effects
+Bessie: Granular with three selectable/recordable samples, fixed starting values, effects
+Tessie: Granular with three selectable/recordable samples, slider for values, effects
 Yak Shaver : rhythmicon with samples 
 Whumpus : Palindromes
 Batsquatch : Oramics
@@ -27,10 +39,10 @@ Gorrog : palindrome arrpegiator NxnxN: one minute buffer with pot controlling ti
 Snake Scarecrow: Last Alley Maze: : F Bb : D# G# : : C# F# : : B E A : :
                                     A F# D# E C# G# Bb F G# B Bb 
                                     F A E C# F# Bb D# B G# E G# E B D# Bb F# C# F C# F
-Vampire Unicorn 
-Pirahua 
+Vampire Unicorn: feral vocaloid
+Pirahua: plays samples on attack like Kate Bush bird piece
 Vivian Ghastly 
-Spark Boa 
+Spark Boa piano roll
 Smoke Crow 
 Beast of Baz : 
 Ningen

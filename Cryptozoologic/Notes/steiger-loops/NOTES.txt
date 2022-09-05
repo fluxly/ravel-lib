@@ -1,0 +1,86 @@
+parameters:
+
+------------ MIDI controllable "global" controls --------------
+
+All have range 0-127.
+
+fl-level, bc-level, pc-level, vn-level, vc-level:  direct amplification.
+127 = unit gain.
+
+flfx-level, etc., effects return for flute, etc., 0-127, 127 = unit gain
+
+rev-return reverb return level, 0-127.
+
+
+------------------ Spatialization ------------------------------------
+
+NOTE: In what follows, the "location" and "spread" parameters may be a
+(target, time) pair; the rest are simple numeric controls.
+
+fl-atten, etc.  Input attenuation in dB, 0-100 (100 means "unit gain").
+
+fl-loc, etc:  spatial location, 0-80, with:
+    0 - back
+    10 - back left speaker (ch. 4)
+    20 - left
+    30 - front left speaker (ch. 1)
+    40 - center stage
+    50 - front right speaker (ch. 2)
+    60 - right
+    70 - right rear speaker (ch. 3)
+    80 - back
+    
+fl-spread, etc:  spread of the "image" from 0 (focussed) to 20 (diffuse).
+
+fl-rev, etc.  Reverb send, dB, 0-100.
+
+flfx-loc., etc.  Spatial location of flute effect return, 10-90 as above
+
+flfx-spread, etc.  Diffusenesss of the effect return.  For MONO effects
+(looped delay, flanger) this is as in "fl-spread", etc.; for STEREO effects, 10
+means regular stereo separation (45 degrees of left and right of image); 0
+means mix to mono and spatialize; and 20 means "spatialize the two channels 90
+degrees to left and right of spatial location".
+
+rev-fback. Reverb feedback, AKA reverb time.  0-100.
+------------------- Flute effect parameters ---------------------
+
+PITCH SHIFT.  (STEREO)
+fl-pshift-switch.  Switch the pitch shifter on and off.
+
+fl-shift1.  Pitch shift of first shifter, in cents up or down.
+fl-window1. "Window" size of first shifter, in msec.
+fl-delay1. Delay in msec for first shifter.
+
+fl-shift2, fl-window2, fl-delay2, ditto for second pitch shifter.
+
+MULTI DELAY. (QUAD) 
+
+NOTE: spatialization spread here should be 0-30.
+
+fl-multitap-switch.  Switch it on and off.
+fl-del1, ..., fl-del4.  Delay times in msec.
+
+LOOP DELAY. (MONO)
+
+fl-loopdel-switch.  Switch it on and off.
+fl-del1.  Delay time in msec.
+fl-fback.  Feedback, percent, 0-100.
+
+------------------- Bass Clarinet effect parameters ---------------------
+
+FLANGER.
+bc-flanger-switch.  Switch it on and off.
+bc-fdel. Flanger delay range, msec.
+bc-speed, Flanger oscillation speed, hundredths of a Hz.
+bc-fback.  Flanger fake feedback (there are only 9 discrete echos.)
+
+
+MAYBE LATER:
+Input attenuations (for "soloing" and dropping gains for processing?)
+
+
+--------------------------------------------------
+changes in score follower
+qlist/score names for sect. 100
+audio input section removed

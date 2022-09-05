@@ -8,22 +8,22 @@ export default class RavelFieldRecorder extends RavelElement {
         return `
         <style>
         #sample-icon {
-            font-size: 80px;
+            font-size: 120px;
             cursor:pointer;
         }
         #container {
-           
+           z-index: 1000;
             font-size: 50px;
-            width: 400px;
+            width: 100%;
             display: flex;
             flex-direction: column;
-            height: 550px;
+            height: 100%;
             position: fixed;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             padding: 20px;
-            background-color: #000000AA;
+            background-color: #000000DD;
             box-shadow: 0px 0px 10px 10px rgba(255, 255, 255,0.2);
              display:none;
         }

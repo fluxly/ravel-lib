@@ -1,0 +1,83 @@
+#N canvas 350 173 684 561 10;
+#X text 18 6 Control a number box (or other graphical control) by sending
+it "set" messages whenever the value changes. If the value change is
+ramped \, the control imitates the ramp but only updates 10 times a
+second.;
+#X text 17 70 Sending a symbol to "\$1-grab" causes the current value
+to be sent to that symbol.;
+#X obj 28 324 r \$1-grab;
+#X obj 28 394 pack s 0;
+#X msg 28 416 \; \$1 \$2;
+#X obj 28 346 t a b;
+#X obj 237 363 v \$0-last;
+#X msg 237 387 set \$1;
+#X obj 160 414 change;
+#X obj 60 368 v \$0-last;
+#X obj 160 385 v \$0-last;
+#X obj 161 489 pack 0 s s;
+#X obj 161 442 t f b b;
+#X obj 189 466 symbol \$1;
+#X msg 161 511 \; \$3 list \$2 \$1;
+#X obj 281 315 r grab-all-init;
+#X obj 173 339 r grab-all-rest;
+#X obj 160 361 b;
+#X obj 262 488 symbol;
+#X obj 281 339 t b;
+#X obj 262 465 r grab-all-target;
+#X obj 160 315 r grab-all-get-\$1;
+#X text 15 98 Sending a symbol to grab-all-target sets the destination
+for a selective grab. Only values that change since the most recent
+"grab-all-init" get reported. Banging grab-all-get-\$1 reports any
+change in this particular parameter. Then bang grab-all-next to get
+any spillover.;
+#X text 14 177 Sending (value \, symbol) to auto-register-\$1 informs
+us that we're under external control by an automat. If a conflicting
+one comes in we complain. The automat should send parameter changes
+to "auto-param-\$1" instead of just "\$1". Messages to "\$1" issue
+a warning that soneone is trying to write to a parameter under automatic
+control. Sending to auto-print prints out all parameters under automatic
+control.;
+#X obj 463 145 r reset;
+#X text 430 41 Args:;
+#X text 450 58 \$1 name of parameter;
+#X text 450 73 \$2 reset value;
+#X obj 471 197 f \$2;
+#X obj 471 217 s \$1;
+#X obj 463 168 t b b b;
+#X obj 301 372 r grab-setallchanged;
+#X msg 300 397 set 1e+20;
+#X msg 484 433 set \$1;
+#X obj 484 382 line 0 100;
+#X obj 484 358 r \$1;
+#X obj 484 456 s \$1-set;
+#X obj 492 407 v \$0-last;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 5 0 3 0;
+#X connect 5 1 9 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 12 0;
+#X connect 9 0 3 1;
+#X connect 10 0 8 0;
+#X connect 11 0 14 0;
+#X connect 12 0 11 0;
+#X connect 12 1 13 0;
+#X connect 13 0 11 1;
+#X connect 15 0 19 0;
+#X connect 16 0 17 0;
+#X connect 17 0 10 0;
+#X connect 18 0 11 2;
+#X connect 19 0 6 0;
+#X connect 20 0 18 0;
+#X connect 21 0 17 0;
+#X connect 24 0 30 0;
+#X connect 28 0 29 0;
+#X connect 30 0 19 0;
+#X connect 30 1 28 0;
+#X connect 31 0 32 0;
+#X connect 32 0 8 0;
+#X connect 33 0 36 0;
+#X connect 34 0 33 0;
+#X connect 34 0 37 0;
+#X connect 35 0 34 0;

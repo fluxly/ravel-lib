@@ -1,0 +1,102 @@
+0 0 # --------------- STARTUP -----------------;
+# SECTION 5 (Event 16, measure 238, beat 1, flute cadenza);
+
+fl-loopdel-switch 0;
+bc-loopdel-switch 0;
+pc-loopdel-switch 0;
+vn-loopdel-switch 0;
+vc-loopdel-switch 0;
+
+rev-fb 85;
+
+pc-atten 100;
+pc-loc 40;
+pc-spread 0;
+pc-rev 90;
+
+pcfx-atten 0;
+pcfx-loc 40;
+pcfx-spread 0;
+pcfx-rev 0;
+
+vc-atten 100;
+vc-loc 45;
+vc-spread 0;
+vc-rev 90;
+
+vcfx-atten 0;
+vcfx-loc 45;
+vcfx-spread 7;
+vcfx-rev 0;
+
+vn-atten 100;
+vn-loc 50;
+vn-spread 0;
+vn-rev 90;
+
+vnfx-atten 0;
+vnfx-loc 50;
+vnfx-spread 7;
+vnfx-rev 0;
+
+fl-atten 93;
+fl-loc 40;
+fl-spread 20;
+fl-rev 90;
+
+flfx-atten 80;
+flfx-loc 40;
+flfx-spread 30;
+flfx-rev 90;
+
+bc-atten 100;
+bc-loc 36;
+bc-spread 0;
+bc-rev 90;
+
+bcfx-atten 0;
+bcfx-loc 36;
+bcfx-spread 0;
+bcfx-rev 90;
+
+fl-del1 333;
+fl-del2 456;
+fl-del3 510;
+fl-del4 687;
+fl-multitap-switch 1;
+fl-fback 50;
+fl-delatten 95;
+
+0 1 # --------------- EVENT 17, measure 249, beat 1 -------------------;
+
+fl-atten 93;
+fl-loc 40;
+fl-spread 0;
+fl-rev 90;
+
+flfx-atten 80;
+flfx-loc 40;
+flfx-spread 0;
+flfx-rev 90;
+
+fl-motorboat 500;
+fl-motorfx 1;
+
+0 2 # --------------- EVENT 18, measure 256, beat 1 -------------------;
+
+fl-motorboat 0;
+fl-motorfx 0;
+
+fl-atten 93;
+fl-loc 40 500;
+fl-spread 20 500;
+fl-rev 90;
+
+flfx-atten 80;
+flfx-loc 40 500;
+flfx-spread 30 500;
+flfx-rev 90;
+
+0 3 # --------------- EVENT 19, measure 266, beat 1, vln -------------------;
+
+10 section-number 19;
